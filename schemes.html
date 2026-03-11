@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Схемы мошенников — PEASE</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">P<span class="accent-letter">E</span>ASE</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="schemes.html" class="active">Схемы</a></li>
+    <li><a href="quiz.html">Тест</a></li>
+    <li><a href="guides.html">Гайды</a></li>
+    <li><a href="contacts.html">Контакты</a></li>
+    <li><a href="quiz.html" class="nav-cta">Пройти тест</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Меню">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Каталог мошеннических схем</div>
+    <h1>Знай врага<br><span class="accent">в лицо.</span></h1>
+    <p>12 самых распространённых схем обмана. Узнайте, как они работают, по каким признакам их распознать и что делать, если вы столкнулись с мошенниками.</p>
+  </div>
+</section>
+
+<!-- SCHEMES CATALOG -->
+<section>
+  <div class="section-tag">Все схемы</div>
+  <h2 class="section-title">Каталог мошеннических схем</h2>
+  <p class="section-sub">Фильтруйте по категории, чтобы быстро найти нужную информацию.</p>
+
+  <!-- Filter Bar -->
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">Все</button>
+    <button class="filter-btn" data-filter="phone">📱 Телефонные</button>
+    <button class="filter-btn" data-filter="online">💻 Онлайн</button>
+    <button class="filter-btn" data-filter="financial">💰 Финансовые</button>
+    <button class="filter-btn" data-filter="social">👥 Социальные</button>
+  </div>
+
+  <!-- Schemes Grid -->
+  <div class="schemes-grid">
+
+    <!-- 1. Phishing -->
+    <div class="scheme-card fade-in" data-category="online">
+      <div class="scheme-card-header">
+        <div class="scheme-icon">🎣</div>
+        <div class="info">
+          <h3>Фишинг</h3>
+          <span class="badge badge-high">Высокая опасность</span>
+        </div>
+      </div>
+      <div class="scheme-card-body">
+        <p>Поддельные сайты и письма, копирующие банки, eGov и популярные сервисы для кражи логинов и данных карт.</p>
+        <div class="scheme-details">
+          <button class="scheme-detail-btn">Как это работает</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ol>
+                <li>Жертва получает email или SMS со ссылкой, похожей на официальный сайт</li>
+                <li>Ссылка ведёт на поддельную копию сайта (например, kaspi-online.xyz)</li>
+                <li>Жертва вводит логин, пароль и данные карты</li>
+                <li>Мошенники получают доступ к аккаунту и снимают деньги</li>
+              </ol>
+            </div>
+          </div>
+          <button class="scheme-detail-btn">Красные флаги</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ul>
+                <li><span class="red-flag">⚠️</span> Подозрительный домен (kaspi-bank.xyz вместо kaspi.kz)</li>
+                <li><span class="red-flag">⚠️</span> Срочность: «Ваш аккаунт будет заблокирован!»</li>
+                <li><span class="red-flag">⚠️</span> Просьба ввести пароль или данные карты</li>
+                <li><span class="red-flag">⚠️</span> Ошибки в тексте и оформлении</li>
+              </ul>
+            </div>
+          </div>
+          <button class="scheme-detail-btn">Что делать</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ol>
+                <li>Не переходите по ссылкам из SMS и email</li>
+                <li>Всегда вводите адрес сайта вручную в браузере</li>
+                <li>Проверяйте сертификат безопасности (замок в адресной строке)</li>
+                <li>Если ввели данные — немедленно звоните в банк и блокируйте карту</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Bank Calls -->
+    <div class="scheme-card fade-in" data-category="phone">
+      <div class="scheme-card-header">
+        <div class="scheme-icon">📞</div>
+        <div class="info">
+          <h3>Звонки от «банка»</h3>
+          <span class="badge badge-high">Высокая опасность</span>
+        </div>
+      </div>
+      <div class="scheme-card-body">
+        <p>Мошенники звонят, представляясь сотрудниками банка или Нацбанка РК, и убеждают перевести деньги на «безопасный счёт».</p>
+        <div class="scheme-details">
+          <button class="scheme-detail-btn">Как это работает</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ol>
+                <li>Звонок с подменой номера (отображается номер банка)</li>
+                <li>«Сотрудник» называет ваше ФИО и частичные данные карты</li>
+                <li>Сообщают о «подозрительных операциях» или «взломе»</li>
+                <li>Предлагают перевести деньги на «безопасный счёт» или назвать код из SMS</li>
+              </ol>
+            </div>
+          </div>
+          <button class="scheme-detail-btn">Красные флаги</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ul>
+                <li><span class="red-flag">⚠️</span> Звонят первыми и создают ощущение срочности</li>
+                <li><span class="red-flag">⚠️</span> Просят код из SMS или CVV-код</li>
+                <li><span class="red-flag">⚠️</span> Предлагают «безопасный счёт»</li>
+                <li><span class="red-flag">⚠️</span> Просят никому не рассказывать о звонке</li>
+              </ul>
+            </div>
+          </div>
+          <button class="scheme-detail-btn">Что делать</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ol>
+                <li>Положите трубку — сразу</li>
+                <li>Позвоните в банк по номеру на обратной стороне карты</li>
+                <li>Никому не сообщайте коды из SMS</li>
+                <li>Банк никогда не предлагает «безопасные счета»</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Fake Shops -->
+    <div class="scheme-card fade-in" data-category="online">
+      <div class="scheme-card-header">
+        <div class="scheme-icon">🛒</div>
+        <div class="info">
+          <h3>Фейковые магазины</h3>
+          <span class="badge badge-high">Высокая опасность</span>
+        </div>
+      </div>
+      <div class="scheme-card-body">
+        <p>Поддельные интернет-магазины с невероятными ценами. Товар не приходит, деньги не возвращают.</p>
+        <div class="scheme-details">
+          <button class="scheme-detail-btn">Как это работает</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ol>
+                <li>Создают профессиональный сайт с товарами по ценам в 3-5 раз ниже рыночных</li>
+                <li>Продвигают через рекламу в соцсетях и поисковиках</li>
+                <li>Принимают оплату переводом на карту или криптовалютой</li>
+                <li>После оплаты исчезают или присылают подделку</li>
+              </ol>
+            </div>
+          </div>
+          <button class="scheme-detail-btn">Красные флаги</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ul>
+                <li><span class="red-flag">⚠️</span> Цена значительно ниже рыночной</li>
+                <li><span class="red-flag">⚠️</span> Сайт существует меньше года</li>
+                <li><span class="red-flag">⚠️</span> Оплата только переводом на карту физлица</li>
+                <li><span class="red-flag">⚠️</span> Нет юридического адреса и БИН</li>
+              </ul>
+            </div>
+          </div>
+          <button class="scheme-detail-btn">Что делать</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ol>
+                <li>Проверяйте возраст домена через whois-сервисы</li>
+                <li>Ищите отзывы на независимых площадках</li>
+                <li>Платите только через защищённые платёжные системы</li>
+                <li>Не доверяйте ценам, которые слишком хороши</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Romance Scams -->
+    <div class="scheme-card fade-in" data-category="social">
+      <div class="scheme-card-header">
+        <div class="scheme-icon">💔</div>
+        <div class="info">
+          <h3>Романтические аферы</h3>
+          <span class="badge badge-medium">Средняя опасность</span>
+        </div>
+      </div>
+      <div class="scheme-card-body">
+        <p>Мошенники заводят романтические отношения онлайн, чтобы затем выманить деньги под различными предлогами.</p>
+        <div class="scheme-details">
+          <button class="scheme-detail-btn">Как это работает</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ol>
+                <li>Знакомятся на сайтах знакомств или в соцсетях</li>
+                <li>Месяцами выстраивают доверительные отношения</li>
+                <li>Начинают просить деньги: «на билет», «на лечение», «на бизнес»</li>
+                <li>Суммы постепенно растут, жертва продолжает платить</li>
+              </ol>
+            </div>
+          </div>
+          <button class="scheme-detail-btn">Красные флаги</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ul>
+                <li><span class="red-flag">⚠️</span> Быстрое развитие «отношений»</li>
+                <li><span class="red-flag">⚠️</span> Отказ от видеозвонков и личных встреч</li>
+                <li><span class="red-flag">⚠️</span> Просьбы о деньгах под эмоциональным предлогом</li>
+                <li><span class="red-flag">⚠️</span> Идеальные фото (часто украденные)</li>
+              </ul>
+            </div>
+          </div>
+          <button class="scheme-detail-btn">Что делать</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ol>
+                <li>Никогда не отправляйте деньги человеку, которого не встречали лично</li>
+                <li>Проверяйте фото через поиск по изображениям</li>
+                <li>Настаивайте на видеозвонке</li>
+                <li>Расскажите близким о новом знакомстве — взгляд со стороны</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Crypto Fraud -->
+    <div class="scheme-card fade-in" data-category="financial">
+      <div class="scheme-card-header">
+        <div class="scheme-icon">₿</div>
+        <div class="info">
+          <h3>Крипто-мошенничество</h3>
+          <span class="badge badge-high">Высокая опасность</span>
+        </div>
+      </div>
+      <div class="scheme-card-body">
+        <p>Фейковые криптобиржи, «инвестиционные платформы» и «сигнальные группы» в Telegram с обещанием быстрого обогащения.</p>
+        <div class="scheme-details">
+          <button class="scheme-detail-btn">Как это работает</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ol>
+                <li>Реклама «инвестиционной платформы» с гарантированной доходностью</li>
+                <li>Показывают поддельный личный кабинет с растущей «прибылью»</li>
+                <li>Просят вложить больше для «увеличения дохода»</li>
+                <li>При попытке вывести деньги — требуют «комиссию» или просто исчезают</li>
+              </ol>
+            </div>
+          </div>
+          <button class="scheme-detail-btn">Красные флаги</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ul>
+                <li><span class="red-flag">⚠️</span> Гарантированная доходность (не бывает в инвестициях)</li>
+                <li><span class="red-flag">⚠️</span> Давление: «Акция только сегодня!»</li>
+                <li><span class="red-flag">⚠️</span> Нет лицензии АРРФР</li>
+                <li><span class="red-flag">⚠️</span> «Консультант» навязчиво пишет в мессенджерах</li>
+              </ul>
+            </div>
+          </div>
+          <button class="scheme-detail-btn">Что делать</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ol>
+                <li>Проверяйте лицензию на сайте АРРФР (finreg.kz)</li>
+                <li>Не вкладывайте деньги по рекомендации незнакомцев</li>
+                <li>«Гарантированная доходность» = мошенничество</li>
+                <li>Используйте только регулируемые биржи</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Fake Jobs -->
+    <div class="scheme-card fade-in" data-category="social">
+      <div class="scheme-card-header">
+        <div class="scheme-icon">💼</div>
+        <div class="info">
+          <h3>Фейковые вакансии</h3>
+          <span class="badge badge-medium">Средняя опасность</span>
+        </div>
+      </div>
+      <div class="scheme-card-body">
+        <p>Несуществующие вакансии с высокой зарплатой, которые используют для кражи персональных данных или денег.</p>
+        <div class="scheme-details">
+          <button class="scheme-detail-btn">Как это работает</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ol>
+                <li>Публикуют вакансию с зарплатой выше рыночной</li>
+                <li>Быстро «принимают» на работу без собеседования</li>
+                <li>Просят оплатить «обучение», «оформление» или «страховку»</li>
+                <li>Или просят данные паспорта для «оформления» — используют для кредитов</li>
+              </ol>
+            </div>
+          </div>
+          <button class="scheme-detail-btn">Красные флаги</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ul>
+                <li><span class="red-flag">⚠️</span> Зарплата значительно выше рыночной</li>
+                <li><span class="red-flag">⚠️</span> Требуют оплату за трудоустройство</li>
+                <li><span class="red-flag">⚠️</span> Принимают без собеседования</li>
+                <li><span class="red-flag">⚠️</span> Общение только в мессенджерах, нет офиса</li>
+              </ul>
+            </div>
+          </div>
+          <button class="scheme-detail-btn">Что делать</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ol>
+                <li>Работодатель не должен брать с вас деньги — никогда</li>
+                <li>Проверяйте компанию в реестре юридических лиц (stat.gov.kz)</li>
+                <li>Настаивайте на личном или видеоинтервью</li>
+                <li>Не отправляйте сканы паспорта до подписания договора</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. Lotteries -->
+    <div class="scheme-card fade-in" data-category="online">
+      <div class="scheme-card-header">
+        <div class="scheme-icon">🎰</div>
+        <div class="info">
+          <h3>Фейковые лотереи и розыгрыши</h3>
+          <span class="badge badge-medium">Средняя опасность</span>
+        </div>
+      </div>
+      <div class="scheme-card-body">
+        <p>«Вы выиграли приз!» — знакомое сообщение? Чтобы «получить» выигрыш, нужно заплатить «налог» или «комиссию».</p>
+        <div class="scheme-details">
+          <button class="scheme-detail-btn">Как это работает</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ol>
+                <li>Рассылка: «Поздравляем! Вы выиграли 3 000 000 ₸!»</li>
+                <li>Для получения нужно заплатить «налог» 30 000–90 000 ₸</li>
+                <li>После оплаты просят заплатить ещё (за «конвертацию», «доставку»)</li>
+                <li>Выигрыш не существует</li>
+              </ol>
+            </div>
+          </div>
+          <button class="scheme-detail-btn">Красные флаги</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ul>
+                <li><span class="red-flag">⚠️</span> Вы не участвовали в розыгрыше</li>
+                <li><span class="red-flag">⚠️</span> Для получения приза нужно заплатить</li>
+                <li><span class="red-flag">⚠️</span> Срочность: «Приз действителен 24 часа»</li>
+                <li><span class="red-flag">⚠️</span> Просят данные карты для «зачисления»</li>
+              </ul>
+            </div>
+          </div>
+          <button class="scheme-detail-btn">Что делать</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ol>
+                <li>Нельзя выиграть в розыгрыше, в котором не участвовали</li>
+                <li>Настоящие лотереи не берут предоплату за выигрыш</li>
+                <li>Игнорируйте и блокируйте отправителя</li>
+                <li>Пожалуйтесь на спам в сервисе, откуда пришло сообщение</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. Investment Pyramids -->
+    <div class="scheme-card fade-in" data-category="financial">
+      <div class="scheme-card-header">
+        <div class="scheme-icon">📐</div>
+        <div class="info">
+          <h3>Инвестиционные пирамиды</h3>
+          <span class="badge badge-high">Высокая опасность</span>
+        </div>
+      </div>
+      <div class="scheme-card-body">
+        <p>Схема Понци: первые вкладчики получают деньги за счёт новых. Когда поток новых участников иссякает — все теряют.</p>
+        <div class="scheme-details">
+          <button class="scheme-detail-btn">Как это работает</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ol>
+                <li>Обещают высокую фиксированную доходность (20–50% в месяц)</li>
+                <li>Первые вкладчики действительно получают выплаты (из денег новых)</li>
+                <li>Довольные «инвесторы» приводят друзей и родственников</li>
+                <li>Когда новых денег не хватает — пирамида рушится, все теряют</li>
+              </ol>
+            </div>
+          </div>
+          <button class="scheme-detail-btn">Красные флаги</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ul>
+                <li><span class="red-flag">⚠️</span> Гарантированная высокая доходность</li>
+                <li><span class="red-flag">⚠️</span> Бонусы за привлечение новых участников</li>
+                <li><span class="red-flag">⚠️</span> Нет лицензии АРРФР</li>
+                <li><span class="red-flag">⚠️</span> Непрозрачная бизнес-модель</li>
+              </ul>
+            </div>
+          </div>
+          <button class="scheme-detail-btn">Что делать</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ol>
+                <li>Проверяйте список АРРФР по пирамидам (finreg.kz)</li>
+                <li>Помните: гарантированная доходность выше банковского депозита — красный флаг</li>
+                <li>Не инвестируйте под давлением знакомых</li>
+                <li>Если вы в пирамиде — выходите как можно раньше</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9. Fake Tech Support -->
+    <div class="scheme-card fade-in" data-category="phone">
+      <div class="scheme-card-header">
+        <div class="scheme-icon">🔧</div>
+        <div class="info">
+          <h3>Фейковая техподдержка</h3>
+          <span class="badge badge-medium">Средняя опасность</span>
+        </div>
+      </div>
+      <div class="scheme-card-body">
+        <p>Звонки или всплывающие окна с предупреждением о «вирусе» на компьютере и предложением платной «помощи».</p>
+        <div class="scheme-details">
+          <button class="scheme-detail-btn">Как это работает</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ol>
+                <li>Всплывающее окно в браузере: «Ваш компьютер заражён!»</li>
+                <li>Указан номер «техподдержки Microsoft/Apple»</li>
+                <li>«Специалист» просит установить программу удалённого доступа</li>
+                <li>Получает доступ к вашему компьютеру и банковским данным</li>
+              </ol>
+            </div>
+          </div>
+          <button class="scheme-detail-btn">Красные флаги</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ul>
+                <li><span class="red-flag">⚠️</span> Всплывающее окно с предупреждением о вирусе</li>
+                <li><span class="red-flag">⚠️</span> Просьба установить TeamViewer или AnyDesk</li>
+                <li><span class="red-flag">⚠️</span> Требование оплаты за «чистку» компьютера</li>
+                <li><span class="red-flag">⚠️</span> Звонок от «техподдержки», которую вы не вызывали</li>
+              </ul>
+            </div>
+          </div>
+          <button class="scheme-detail-btn">Что делать</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ol>
+                <li>Закройте вкладку браузера (Ctrl+W или Cmd+W)</li>
+                <li>Microsoft и Apple никогда не звонят первыми</li>
+                <li>Никогда не устанавливайте программы по просьбе незнакомцев</li>
+                <li>Если установили — немедленно удалите и смените пароли</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10. QR Scams -->
+    <div class="scheme-card fade-in" data-category="online">
+      <div class="scheme-card-header">
+        <div class="scheme-icon">📷</div>
+        <div class="info">
+          <h3>QR-код мошенничество</h3>
+          <span class="badge badge-medium">Средняя опасность</span>
+        </div>
+      </div>
+      <div class="scheme-card-body">
+        <p>Поддельные QR-коды на объявлениях, чеках и товарах, ведущие на фишинговые сайты.</p>
+        <div class="scheme-details">
+          <button class="scheme-detail-btn">Как это работает</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ol>
+                <li>Мошенники наклеивают поддельные QR-коды поверх настоящих</li>
+                <li>QR-код ведёт на фишинговый сайт или скачивает вредоносное ПО</li>
+                <li>На сайте просят ввести данные карты или личную информацию</li>
+                <li>Также используют для подмены реквизитов оплаты</li>
+              </ol>
+            </div>
+          </div>
+          <button class="scheme-detail-btn">Красные флаги</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ul>
+                <li><span class="red-flag">⚠️</span> QR-код наклеен поверх другого</li>
+                <li><span class="red-flag">⚠️</span> После сканирования просят ввести данные карты</li>
+                <li><span class="red-flag">⚠️</span> QR-код на подозрительных объявлениях</li>
+                <li><span class="red-flag">⚠️</span> Ссылка ведёт на незнакомый домен</li>
+              </ul>
+            </div>
+          </div>
+          <button class="scheme-detail-btn">Что делать</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ol>
+                <li>Проверяйте URL после сканирования перед переходом</li>
+                <li>Не сканируйте QR-коды с подозрительных объявлений</li>
+                <li>Используйте QR-сканер, который показывает URL до перехода</li>
+                <li>Обращайте внимание на следы наклейки поверх оригинала</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11. Social Media Hacks -->
+    <div class="scheme-card fade-in" data-category="social">
+      <div class="scheme-card-header">
+        <div class="scheme-icon">👤</div>
+        <div class="info">
+          <h3>Взлом соцсетей</h3>
+          <span class="badge badge-high">Высокая опасность</span>
+        </div>
+      </div>
+      <div class="scheme-card-body">
+        <p>Взлом аккаунтов в Instagram, Telegram, WhatsApp для рассылки просьб о деньгах друзьям жертвы.</p>
+        <div class="scheme-details">
+          <button class="scheme-detail-btn">Как это работает</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ol>
+                <li>Воруют аккаунт через фишинг или утечку паролей</li>
+                <li>Рассылают сообщения друзьям: «Привет, одолжи 5000 до завтра»</li>
+                <li>Используют стиль общения жертвы для убедительности</li>
+                <li>Деньги переводят на подставные карты</li>
+              </ol>
+            </div>
+          </div>
+          <button class="scheme-detail-btn">Красные флаги</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ul>
+                <li><span class="red-flag">⚠️</span> Неожиданная просьба о деньгах от друга</li>
+                <li><span class="red-flag">⚠️</span> Отказ от голосового/видеозвонка</li>
+                <li><span class="red-flag">⚠️</span> Нетипичный стиль общения</li>
+                <li><span class="red-flag">⚠️</span> Просьба перевести на карту третьего лица</li>
+              </ul>
+            </div>
+          </div>
+          <button class="scheme-detail-btn">Что делать</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ol>
+                <li>Всегда перезванивайте другу по телефону для проверки</li>
+                <li>Включите двухфакторную аутентификацию везде</li>
+                <li>Используйте уникальные пароли для каждого сервиса</li>
+                <li>Если вас взломали — предупредите контакты и обратитесь в поддержку</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12. Fake Charities -->
+    <div class="scheme-card fade-in" data-category="social">
+      <div class="scheme-card-header">
+        <div class="scheme-icon">🎗️</div>
+        <div class="info">
+          <h3>Фейковые благотворительные сборы</h3>
+          <span class="badge badge-medium">Средняя опасность</span>
+        </div>
+      </div>
+      <div class="scheme-card-body">
+        <p>Ложные сборы на «лечение ребёнка» или «помощь пострадавшим» — деньги идут мошенникам.</p>
+        <div class="scheme-details">
+          <button class="scheme-detail-btn">Как это работает</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ol>
+                <li>Создают трогательную историю с фото (часто украденными)</li>
+                <li>Распространяют через соцсети и мессенджеры</li>
+                <li>Указывают личную карту для сбора средств</li>
+                <li>Используют эмоциональное давление для быстрых переводов</li>
+              </ol>
+            </div>
+          </div>
+          <button class="scheme-detail-btn">Красные флаги</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ul>
+                <li><span class="red-flag">⚠️</span> Сбор на личную карту, а не через фонд</li>
+                <li><span class="red-flag">⚠️</span> Нет документов, подтверждающих историю</li>
+                <li><span class="red-flag">⚠️</span> Эмоциональное давление и срочность</li>
+                <li><span class="red-flag">⚠️</span> Фото не находятся в поиске по изображениям</li>
+              </ul>
+            </div>
+          </div>
+          <button class="scheme-detail-btn">Что делать</button>
+          <div class="scheme-detail-content">
+            <div class="scheme-detail-inner">
+              <ol>
+                <li>Переводите деньги только через проверенные фонды</li>
+                <li>Проверяйте фонд в реестре НКО на сайте gov.kz</li>
+                <li>Проверяйте фото через поиск по изображениям</li>
+                <li>Благотворительность через личные карты — красный флаг</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo" style="font-size:1.6rem;">P<span class="accent-letter">E</span>ASE</a>
+      <p>Образовательный проект о защите от мошенничества. Защити себя и близких.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Разделы</h4>
+      <ul>
+        <li><a href="schemes.html">Схемы мошенников</a></li>
+        <li><a href="quiz.html">Тест на знания</a></li>
+        <li><a href="guides.html">Гайды</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Помощь</h4>
+      <ul>
+        <li><a href="contacts.html">Что делать если обманули</a></li>
+        <li><a href="contacts.html">Куда звонить</a></li>
+        <li><a href="contacts.html">Сообщить о схеме</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>О проекте</h4>
+      <ul>
+        <li><a href="#">Команда PEASE</a></li>
+        <li><a href="#">Источники</a></li>
+        <li><a href="#">Конфиденциальность</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 PEASE. Все права защищены.</span>
+    <span>Защити себя и близких</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

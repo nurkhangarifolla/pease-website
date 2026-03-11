@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Экстренная помощь — PEASE</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">P<span class="accent-letter">E</span>ASE</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="schemes.html">Схемы</a></li>
+    <li><a href="quiz.html">Тест</a></li>
+    <li><a href="guides.html">Гайды</a></li>
+    <li><a href="contacts.html" class="active">Контакты</a></li>
+    <li><a href="quiz.html" class="nav-cta">Пройти тест</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Меню">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Экстренная помощь</div>
+    <h1>Вас обманули?<br><span class="accent">Действуйте сейчас.</span></h1>
+    <p>Пошаговый план действий, экстренные контакты и ответы на главные вопросы. Чем быстрее вы среагируете, тем больше шансов вернуть деньги.</p>
+  </div>
+</section>
+
+<!-- EMERGENCY TIMELINE -->
+<section>
+  <div class="section-tag">Пошаговый план</div>
+  <h2 class="section-title">Вас только что обманули — делайте это по порядку</h2>
+  <p class="section-sub">Каждая минута на счету. Следуйте этим шагам в указанном порядке.</p>
+
+  <div class="timeline">
+    <div class="timeline-item fade-in" data-step="1">
+      <h4>Немедленно — Заблокируйте карту</h4>
+      <p>Позвоните в банк по номеру на обратной стороне карты или заблокируйте через мобильное приложение. Это остановит дальнейшие списания. Не звоните по номерам из подозрительных SMS.</p>
+    </div>
+    <div class="timeline-item fade-in" data-step="2">
+      <h4>В течение 5 минут — Смените пароли</h4>
+      <p>Если вы вводили пароли или данные на подозрительном сайте — смените их. Начните с email, потом банковские приложения, затем соцсети. Включите двухфакторную аутентификацию.</p>
+    </div>
+    <div class="timeline-item fade-in" data-step="3">
+      <h4>В течение 15 минут — Зафиксируйте доказательства</h4>
+      <p>Сделайте скриншоты: переписка, SMS, email, сайт мошенника, история звонков. Запишите номера телефонов, адреса сайтов, суммы переводов. Не удаляйте ничего.</p>
+    </div>
+    <div class="timeline-item fade-in" data-step="4">
+      <h4>В течение часа — Заявление в банк</h4>
+      <p>Подайте заявление о спорной операции. По закону банк обязан рассмотреть его в течение 30 дней (60 дней для международных операций). Сохраните номер обращения.</p>
+    </div>
+    <div class="timeline-item fade-in" data-step="5">
+      <h4>В течение суток — Заявление в полицию</h4>
+      <p>Обратитесь в ближайший отдел полиции лично. Возьмите с собой все доказательства: скриншоты, выписки из банка. Получите талон-уведомление о принятии заявления.</p>
+    </div>
+    <div class="timeline-item fade-in" data-step="6">
+      <h4>Дополнительно — Сообщите в АРРФР</h4>
+      <p>Подайте жалобу через интернет-приёмную АРРФР (finreg.kz). Это поможет зафиксировать мошенническую схему и защитить других людей от тех же мошенников.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EMERGENCY CONTACTS -->
+<section style="background:var(--card-bg);">
+  <div class="section-tag">Экстренные контакты</div>
+  <h2 class="section-title">Куда звонить</h2>
+  <p class="section-sub">Сохраните эти номера в телефоне прямо сейчас.</p>
+
+  <div class="contacts-grid">
+    <div class="contact-card fade-in">
+      <div class="contact-card-icon">🏦</div>
+      <h3>Ваш банк</h3>
+      <div class="phone">Номер на карте</div>
+      <p>Звоните по номеру на обратной стороне вашей карты. Работает круглосуточно. Попросите заблокировать карту и оформить заявление о мошенничестве.</p>
+    </div>
+    <div class="contact-card fade-in">
+      <div class="contact-card-icon">🚔</div>
+      <h3>Полиция</h3>
+      <div class="phone">102</div>
+      <p>Единый номер полиции. Подайте заявление о мошенничестве лично в ближайшем отделе. Возьмите с собой все доказательства.</p>
+    </div>
+    <div class="contact-card fade-in">
+      <div class="contact-card-icon">🏛️</div>
+      <h3>АРРФР (финансовый регулятор)</h3>
+      <div class="phone">1459</div>
+      <p>Бесплатный номер для жалоб на финансовые организации. Также можно подать обращение через интернет-приёмную на finreg.kz.</p>
+    </div>
+    <div class="contact-card fade-in">
+      <div class="contact-card-icon">🌐</div>
+      <h3>Министерство цифрового развития РК</h3>
+      <div class="phone">1414</div>
+      <p>Для блокировки мошеннических сайтов. Подайте жалобу через портал eOtinish (eotinish.gov.kz). Помогите заблокировать ресурс мошенников.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="section-tag">Частые вопросы</div>
+  <h2 class="section-title">FAQ после мошенничества</h2>
+  <p class="section-sub">Ответы на самые важные вопросы, которые возникают после столкновения с мошенниками.</p>
+
+  <div class="accordion-group" style="max-width:720px;">
+    <div class="accordion-item fade-in">
+      <button class="accordion-btn">Можно ли вернуть деньги, переведённые мошенникам?</button>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <p>Шансы есть, если действовать быстро. По закону банк обязан рассмотреть заявление о спорной операции. Если вы подали заявление в день операции и мошенник ещё не снял деньги — банк может заморозить средства. Статистически возвращают около 4-8% от украденных сумм, но при быстром обращении шансы значительно выше.</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item fade-in">
+      <button class="accordion-btn">Нужно ли идти в полицию, если сумма небольшая?</button>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <p>Да, обязательно. Даже если сумма небольшая, ваше заявление поможет: 1) зафиксировать мошенническую схему, 2) объединить его с другими заявлениями по тем же мошенникам, 3) привлечь преступников к ответственности. Полиция не имеет права отказать в принятии заявления независимо от суммы.</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item fade-in">
+      <button class="accordion-btn">Мне стыдно, что я попался. Что делать?</button>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <p>Мошенники — профессиональные психологи. Они используют страх, срочность и авторитет, чтобы отключить критическое мышление. Жертвами становятся образованные, успешные люди. Это не ваша вина — это преступление мошенников. Не стесняйтесь обращаться за помощью и расскажите о своём опыте, чтобы защитить других.</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item fade-in">
+      <button class="accordion-btn">Мошенники знают мои данные. Чем это грозит?</button>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <p>Если утекли ФИО + телефон — вам будут звонить с новыми схемами. Если утекли данные удостоверения личности — на вас могут оформить кредит. Что делать: 1) смените все пароли, 2) включите 2FA везде, 3) проверяйте свою кредитную историю через ПКБ (1cb.kz), 4) установите добровольный отказ от получения кредитов через eGov.kz.</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item fade-in">
+      <button class="accordion-btn">Как проверить, не оформлен ли на меня кредит?</button>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <p>Через Первое кредитное бюро (1cb.kz) вы можете бесплатно запросить кредитную историю. Также можно установить добровольный отказ от получения кредитов через eGov.kz — это бесплатно и защитит от оформления кредитов мошенниками.</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item fade-in">
+      <button class="accordion-btn">Могу ли я подать заявление в полицию онлайн?</button>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <p>Да, вы можете подать обращение через портал Qamqor (qamqor.gov.kz), но для возбуждения дела потребуется личный визит в отделение. Онлайн-обращение ускоряет процесс — к вашему приходу заявление уже будет зарегистрировано. Также можно позвонить по номеру 102 и получить консультацию.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REPORT FORM -->
+<section style="background:var(--card-bg);">
+  <div class="section-tag">Помогите другим</div>
+  <h2 class="section-title">Сообщить о мошеннической схеме</h2>
+  <p class="section-sub">Расскажите нам о новой схеме мошенничества, чтобы мы предупредили других. Ваша информация поможет защитить людей.</p>
+
+  <form class="report-form" id="reportForm">
+    <div class="form-row">
+      <div>
+        <label for="reportName">Ваше имя</label>
+        <input type="text" id="reportName" name="name" placeholder="Иван Иванов" required>
+      </div>
+      <div>
+        <label for="reportEmail">Email</label>
+        <input type="email" id="reportEmail" name="email" placeholder="ivan@example.com" required>
+      </div>
+    </div>
+    <label for="reportType">Тип мошенничества</label>
+    <select id="reportType" name="type" required>
+      <option value="" disabled selected>Выберите тип</option>
+      <option value="phone">Телефонное мошенничество</option>
+      <option value="online">Онлайн-мошенничество</option>
+      <option value="financial">Финансовое мошенничество</option>
+      <option value="social">Социальная инженерия</option>
+      <option value="other">Другое</option>
+    </select>
+    <label for="reportDesc">Опишите схему</label>
+    <textarea id="reportDesc" name="description" placeholder="Подробно опишите, как действовали мошенники: что говорили, какие ссылки отправляли, какие данные запрашивали..." required></textarea>
+    <label for="reportEvidence">Ссылки или номера телефонов мошенников</label>
+    <input type="text" id="reportEvidence" name="evidence" placeholder="Номер телефона, URL сайта, email мошенника...">
+    <button type="submit" class="btn btn-accent" style="align-self:flex-start;">Отправить сообщение</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo" style="font-size:1.6rem;">P<span class="accent-letter">E</span>ASE</a>
+      <p>Образовательный проект о защите от мошенничества. Защити себя и близких.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Разделы</h4>
+      <ul>
+        <li><a href="schemes.html">Схемы мошенников</a></li>
+        <li><a href="quiz.html">Тест на знания</a></li>
+        <li><a href="guides.html">Гайды</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Помощь</h4>
+      <ul>
+        <li><a href="contacts.html">Что делать если обманули</a></li>
+        <li><a href="contacts.html">Куда звонить</a></li>
+        <li><a href="contacts.html">Сообщить о схеме</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>О проекте</h4>
+      <ul>
+        <li><a href="#">Команда PEASE</a></li>
+        <li><a href="#">Источники</a></li>
+        <li><a href="#">Конфиденциальность</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 PEASE. Все права защищены.</span>
+    <span>Защити себя и близких</span>
+  </div>
+</footer>
+
+<div id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init('OMrw3CEEu5w_ZalI1');</script>
+<script src="js/main.js"></script>
+</body>
+</html>
