@@ -340,7 +340,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="quiz-level-badge ${getLevelClass(q.level)}">${q.levelName} — Вопрос ${currentQuestion + 1}</div>
       <div class="quiz-question-card">
         <div class="quiz-scenario">
-          <div class="label">📩 ${q.scenario}</div>
+          <div class="label"><i class="fa-solid fa-envelope"></i> ${q.scenario}</div>
           <p>${q.text}</p>
         </div>
         <div class="quiz-options">
@@ -407,19 +407,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const pct = Math.round((score / quizData.length) * 100);
 
     if (score >= 9) {
-      badge = '🛡️';
+      badge = '<i class="fa-solid fa-shield-halved"></i>';
       title = 'Эксперт по безопасности!';
       desc = 'Вы отлично разбираетесь в схемах мошенников. Поделитесь знаниями с близкими!';
     } else if (score >= 7) {
-      badge = '👍';
+      badge = '<i class="fa-solid fa-thumbs-up"></i>';
       title = 'Хороший результат!';
       desc = 'Вы знаете основные схемы, но стоит изучить продвинутые методы мошенников.';
     } else if (score >= 5) {
-      badge = '⚠️';
+      badge = '<i class="fa-solid fa-triangle-exclamation"></i>';
       title = 'Будьте внимательнее!';
       desc = 'Вы знаете базовые правила, но мошенники могут вас обмануть. Изучите наши гайды.';
     } else {
-      badge = '🚨';
+      badge = '<i class="fa-solid fa-circle-exclamation"></i>';
       title = 'Вы в зоне риска!';
       desc = 'Мошенники могут легко вас обмануть. Обязательно изучите раздел со схемами и гайды по безопасности.';
     }

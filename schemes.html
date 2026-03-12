@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Схемы мошенников — PEASE</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
@@ -31,6 +32,7 @@
     <h1>Знай врага<br><span class="accent">в лицо.</span></h1>
     <p>12 самых распространённых схем обмана. Узнайте, как они работают, по каким признакам их распознать и что делать, если вы столкнулись с мошенниками.</p>
   </div>
+  <div class="hero-decor"><i class="fa-solid fa-user-secret"></i></div>
 </section>
 
 <!-- SCHEMES CATALOG -->
@@ -42,10 +44,10 @@
   <!-- Filter Bar -->
   <div class="filter-bar">
     <button class="filter-btn active" data-filter="all">Все</button>
-    <button class="filter-btn" data-filter="phone">📱 Телефонные</button>
-    <button class="filter-btn" data-filter="online">💻 Онлайн</button>
-    <button class="filter-btn" data-filter="financial">💰 Финансовые</button>
-    <button class="filter-btn" data-filter="social">👥 Социальные</button>
+    <button class="filter-btn" data-filter="phone"><i class="fa-solid fa-mobile-screen-button"></i> Телефонные</button>
+    <button class="filter-btn" data-filter="online"><i class="fa-solid fa-laptop"></i> Онлайн</button>
+    <button class="filter-btn" data-filter="financial"><i class="fa-solid fa-coins"></i> Финансовые</button>
+    <button class="filter-btn" data-filter="social"><i class="fa-solid fa-users"></i> Социальные</button>
   </div>
 
   <!-- Schemes Grid -->
@@ -54,7 +56,7 @@
     <!-- 1. Phishing -->
     <div class="scheme-card fade-in" data-category="online">
       <div class="scheme-card-header">
-        <div class="scheme-icon">🎣</div>
+        <div class="scheme-icon"><i class="fa-solid fa-fish"></i></div>
         <div class="info">
           <h3>Фишинг</h3>
           <span class="badge badge-high">Высокая опасность</span>
@@ -78,10 +80,10 @@
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ul>
-                <li><span class="red-flag">⚠️</span> Подозрительный домен (kaspi-bank.xyz вместо kaspi.kz)</li>
-                <li><span class="red-flag">⚠️</span> Срочность: «Ваш аккаунт будет заблокирован!»</li>
-                <li><span class="red-flag">⚠️</span> Просьба ввести пароль или данные карты</li>
-                <li><span class="red-flag">⚠️</span> Ошибки в тексте и оформлении</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Подозрительный домен (kaspi-bank.xyz вместо kaspi.kz)</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Срочность: «Ваш аккаунт будет заблокирован!»</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Просьба ввести пароль или данные карты</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Ошибки в тексте и оформлении</li>
               </ul>
             </div>
           </div>
@@ -103,7 +105,7 @@
     <!-- 2. Bank Calls -->
     <div class="scheme-card fade-in" data-category="phone">
       <div class="scheme-card-header">
-        <div class="scheme-icon">📞</div>
+        <div class="scheme-icon"><i class="fa-solid fa-phone"></i></div>
         <div class="info">
           <h3>Звонки от «банка»</h3>
           <span class="badge badge-high">Высокая опасность</span>
@@ -127,10 +129,10 @@
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ul>
-                <li><span class="red-flag">⚠️</span> Звонят первыми и создают ощущение срочности</li>
-                <li><span class="red-flag">⚠️</span> Просят код из SMS или CVV-код</li>
-                <li><span class="red-flag">⚠️</span> Предлагают «безопасный счёт»</li>
-                <li><span class="red-flag">⚠️</span> Просят никому не рассказывать о звонке</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Звонят первыми и создают ощущение срочности</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Просят код из SMS или CVV-код</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Предлагают «безопасный счёт»</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Просят никому не рассказывать о звонке</li>
               </ul>
             </div>
           </div>
@@ -152,7 +154,7 @@
     <!-- 3. Fake Shops -->
     <div class="scheme-card fade-in" data-category="online">
       <div class="scheme-card-header">
-        <div class="scheme-icon">🛒</div>
+        <div class="scheme-icon"><i class="fa-solid fa-cart-shopping"></i></div>
         <div class="info">
           <h3>Фейковые магазины</h3>
           <span class="badge badge-high">Высокая опасность</span>
@@ -176,10 +178,10 @@
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ul>
-                <li><span class="red-flag">⚠️</span> Цена значительно ниже рыночной</li>
-                <li><span class="red-flag">⚠️</span> Сайт существует меньше года</li>
-                <li><span class="red-flag">⚠️</span> Оплата только переводом на карту физлица</li>
-                <li><span class="red-flag">⚠️</span> Нет юридического адреса и БИН</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Цена значительно ниже рыночной</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Сайт существует меньше года</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Оплата только переводом на карту физлица</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Нет юридического адреса и БИН</li>
               </ul>
             </div>
           </div>
@@ -201,7 +203,7 @@
     <!-- 4. Romance Scams -->
     <div class="scheme-card fade-in" data-category="social">
       <div class="scheme-card-header">
-        <div class="scheme-icon">💔</div>
+        <div class="scheme-icon"><i class="fa-solid fa-heart-crack"></i></div>
         <div class="info">
           <h3>Романтические аферы</h3>
           <span class="badge badge-medium">Средняя опасность</span>
@@ -225,10 +227,10 @@
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ul>
-                <li><span class="red-flag">⚠️</span> Быстрое развитие «отношений»</li>
-                <li><span class="red-flag">⚠️</span> Отказ от видеозвонков и личных встреч</li>
-                <li><span class="red-flag">⚠️</span> Просьбы о деньгах под эмоциональным предлогом</li>
-                <li><span class="red-flag">⚠️</span> Идеальные фото (часто украденные)</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Быстрое развитие «отношений»</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Отказ от видеозвонков и личных встреч</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Просьбы о деньгах под эмоциональным предлогом</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Идеальные фото (часто украденные)</li>
               </ul>
             </div>
           </div>
@@ -250,7 +252,7 @@
     <!-- 5. Crypto Fraud -->
     <div class="scheme-card fade-in" data-category="financial">
       <div class="scheme-card-header">
-        <div class="scheme-icon">₿</div>
+        <div class="scheme-icon"><i class="fa-brands fa-bitcoin"></i></div>
         <div class="info">
           <h3>Крипто-мошенничество</h3>
           <span class="badge badge-high">Высокая опасность</span>
@@ -274,10 +276,10 @@
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ul>
-                <li><span class="red-flag">⚠️</span> Гарантированная доходность (не бывает в инвестициях)</li>
-                <li><span class="red-flag">⚠️</span> Давление: «Акция только сегодня!»</li>
-                <li><span class="red-flag">⚠️</span> Нет лицензии АРРФР</li>
-                <li><span class="red-flag">⚠️</span> «Консультант» навязчиво пишет в мессенджерах</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Гарантированная доходность (не бывает в инвестициях)</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Давление: «Акция только сегодня!»</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Нет лицензии АРРФР</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> «Консультант» навязчиво пишет в мессенджерах</li>
               </ul>
             </div>
           </div>
@@ -299,7 +301,7 @@
     <!-- 6. Fake Jobs -->
     <div class="scheme-card fade-in" data-category="social">
       <div class="scheme-card-header">
-        <div class="scheme-icon">💼</div>
+        <div class="scheme-icon"><i class="fa-solid fa-briefcase"></i></div>
         <div class="info">
           <h3>Фейковые вакансии</h3>
           <span class="badge badge-medium">Средняя опасность</span>
@@ -323,10 +325,10 @@
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ul>
-                <li><span class="red-flag">⚠️</span> Зарплата значительно выше рыночной</li>
-                <li><span class="red-flag">⚠️</span> Требуют оплату за трудоустройство</li>
-                <li><span class="red-flag">⚠️</span> Принимают без собеседования</li>
-                <li><span class="red-flag">⚠️</span> Общение только в мессенджерах, нет офиса</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Зарплата значительно выше рыночной</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Требуют оплату за трудоустройство</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Принимают без собеседования</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Общение только в мессенджерах, нет офиса</li>
               </ul>
             </div>
           </div>
@@ -348,7 +350,7 @@
     <!-- 7. Lotteries -->
     <div class="scheme-card fade-in" data-category="online">
       <div class="scheme-card-header">
-        <div class="scheme-icon">🎰</div>
+        <div class="scheme-icon"><i class="fa-solid fa-dice"></i></div>
         <div class="info">
           <h3>Фейковые лотереи и розыгрыши</h3>
           <span class="badge badge-medium">Средняя опасность</span>
@@ -372,10 +374,10 @@
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ul>
-                <li><span class="red-flag">⚠️</span> Вы не участвовали в розыгрыше</li>
-                <li><span class="red-flag">⚠️</span> Для получения приза нужно заплатить</li>
-                <li><span class="red-flag">⚠️</span> Срочность: «Приз действителен 24 часа»</li>
-                <li><span class="red-flag">⚠️</span> Просят данные карты для «зачисления»</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Вы не участвовали в розыгрыше</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Для получения приза нужно заплатить</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Срочность: «Приз действителен 24 часа»</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Просят данные карты для «зачисления»</li>
               </ul>
             </div>
           </div>
@@ -397,7 +399,7 @@
     <!-- 8. Investment Pyramids -->
     <div class="scheme-card fade-in" data-category="financial">
       <div class="scheme-card-header">
-        <div class="scheme-icon">📐</div>
+        <div class="scheme-icon"><i class="fa-solid fa-chart-line"></i></div>
         <div class="info">
           <h3>Инвестиционные пирамиды</h3>
           <span class="badge badge-high">Высокая опасность</span>
@@ -421,10 +423,10 @@
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ul>
-                <li><span class="red-flag">⚠️</span> Гарантированная высокая доходность</li>
-                <li><span class="red-flag">⚠️</span> Бонусы за привлечение новых участников</li>
-                <li><span class="red-flag">⚠️</span> Нет лицензии АРРФР</li>
-                <li><span class="red-flag">⚠️</span> Непрозрачная бизнес-модель</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Гарантированная высокая доходность</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Бонусы за привлечение новых участников</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Нет лицензии АРРФР</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Непрозрачная бизнес-модель</li>
               </ul>
             </div>
           </div>
@@ -446,7 +448,7 @@
     <!-- 9. Fake Tech Support -->
     <div class="scheme-card fade-in" data-category="phone">
       <div class="scheme-card-header">
-        <div class="scheme-icon">🔧</div>
+        <div class="scheme-icon"><i class="fa-solid fa-wrench"></i></div>
         <div class="info">
           <h3>Фейковая техподдержка</h3>
           <span class="badge badge-medium">Средняя опасность</span>
@@ -470,10 +472,10 @@
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ul>
-                <li><span class="red-flag">⚠️</span> Всплывающее окно с предупреждением о вирусе</li>
-                <li><span class="red-flag">⚠️</span> Просьба установить TeamViewer или AnyDesk</li>
-                <li><span class="red-flag">⚠️</span> Требование оплаты за «чистку» компьютера</li>
-                <li><span class="red-flag">⚠️</span> Звонок от «техподдержки», которую вы не вызывали</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Всплывающее окно с предупреждением о вирусе</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Просьба установить TeamViewer или AnyDesk</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Требование оплаты за «чистку» компьютера</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Звонок от «техподдержки», которую вы не вызывали</li>
               </ul>
             </div>
           </div>
@@ -495,7 +497,7 @@
     <!-- 10. QR Scams -->
     <div class="scheme-card fade-in" data-category="online">
       <div class="scheme-card-header">
-        <div class="scheme-icon">📷</div>
+        <div class="scheme-icon"><i class="fa-solid fa-qrcode"></i></div>
         <div class="info">
           <h3>QR-код мошенничество</h3>
           <span class="badge badge-medium">Средняя опасность</span>
@@ -519,10 +521,10 @@
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ul>
-                <li><span class="red-flag">⚠️</span> QR-код наклеен поверх другого</li>
-                <li><span class="red-flag">⚠️</span> После сканирования просят ввести данные карты</li>
-                <li><span class="red-flag">⚠️</span> QR-код на подозрительных объявлениях</li>
-                <li><span class="red-flag">⚠️</span> Ссылка ведёт на незнакомый домен</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> QR-код наклеен поверх другого</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> После сканирования просят ввести данные карты</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> QR-код на подозрительных объявлениях</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Ссылка ведёт на незнакомый домен</li>
               </ul>
             </div>
           </div>
@@ -544,7 +546,7 @@
     <!-- 11. Social Media Hacks -->
     <div class="scheme-card fade-in" data-category="social">
       <div class="scheme-card-header">
-        <div class="scheme-icon">👤</div>
+        <div class="scheme-icon"><i class="fa-solid fa-user-lock"></i></div>
         <div class="info">
           <h3>Взлом соцсетей</h3>
           <span class="badge badge-high">Высокая опасность</span>
@@ -568,10 +570,10 @@
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ul>
-                <li><span class="red-flag">⚠️</span> Неожиданная просьба о деньгах от друга</li>
-                <li><span class="red-flag">⚠️</span> Отказ от голосового/видеозвонка</li>
-                <li><span class="red-flag">⚠️</span> Нетипичный стиль общения</li>
-                <li><span class="red-flag">⚠️</span> Просьба перевести на карту третьего лица</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Неожиданная просьба о деньгах от друга</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Отказ от голосового/видеозвонка</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Нетипичный стиль общения</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Просьба перевести на карту третьего лица</li>
               </ul>
             </div>
           </div>
@@ -593,7 +595,7 @@
     <!-- 12. Fake Charities -->
     <div class="scheme-card fade-in" data-category="social">
       <div class="scheme-card-header">
-        <div class="scheme-icon">🎗️</div>
+        <div class="scheme-icon"><i class="fa-solid fa-ribbon"></i></div>
         <div class="info">
           <h3>Фейковые благотворительные сборы</h3>
           <span class="badge badge-medium">Средняя опасность</span>
@@ -617,10 +619,10 @@
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ul>
-                <li><span class="red-flag">⚠️</span> Сбор на личную карту, а не через фонд</li>
-                <li><span class="red-flag">⚠️</span> Нет документов, подтверждающих историю</li>
-                <li><span class="red-flag">⚠️</span> Эмоциональное давление и срочность</li>
-                <li><span class="red-flag">⚠️</span> Фото не находятся в поиске по изображениям</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Сбор на личную карту, а не через фонд</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Нет документов, подтверждающих историю</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Эмоциональное давление и срочность</li>
+                <li><span class="red-flag"><i class="fa-solid fa-triangle-exclamation"></i></span> Фото не находятся в поиске по изображениям</li>
               </ul>
             </div>
           </div>
@@ -648,7 +650,7 @@
     <div class="footer-brand">
       <a href="index.html" class="nav-logo" style="font-size:1.6rem;">P<span class="accent-letter">E</span>ASE</a>
       <p>Образовательный проект о защите от мошенничества. Защити себя и близких.</p>
-      <a href="https://instagram.com/pease_project" target="_blank" rel="noopener" style="color:var(--accent-light); font-size:0.85rem; text-decoration:none;">📸 @pease_project</a>
+      <a href="https://www.instagram.com/pease_project" target="_blank" rel="noopener" style="color:var(--accent-light); font-size:0.85rem; text-decoration:none;"><i class="fa-brands fa-instagram"></i> @pease_project</a>
     </div>
     <div class="footer-col">
       <h4>Разделы</h4>

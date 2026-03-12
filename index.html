@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PEASE — Защити себя и близких от мошенников</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
@@ -25,26 +26,93 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero" style="min-height:100vh;">
-  <div class="hero-content">
-    <div class="hero-badge">Образовательный проект 2026</div>
-    <h1>Не дай себя<br><span class="accent">обмануть.</span></h1>
-    <p>
-      PEASE — образовательная платформа о мошенничестве в интернете.
-      Узнайте, как работают популярные схемы обмана и защитите себя и своих близких.
-    </p>
-    <div class="btn-group">
-      <a href="schemes.html" class="btn btn-accent">Схемы мошенников</a>
-      <a href="quiz.html" class="btn btn-outline">Проверить знания</a>
+<section class="hero" style="min-height:100vh; padding-bottom:80px;">
+  <div class="hero-split">
+    <div class="hero-content">
+      <div class="hero-badge">Образовательный проект 2026</div>
+      <h1>Не дай себя<br><span class="accent">обмануть.</span></h1>
+      <p>
+        PEASE — образовательная платформа о мошенничестве в интернете.
+        Узнайте, как работают популярные схемы обмана и защитите себя и своих близких.
+      </p>
+      <div class="btn-group">
+        <a href="schemes.html" class="btn btn-accent">Схемы мошенников</a>
+        <a href="quiz.html" class="btn btn-outline">Проверить знания</a>
+      </div>
+    </div>
+    <div class="hero-illustration">
+      <svg viewBox="0 0 400 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Shield body -->
+        <path d="M200 20L60 90V220C60 320 130 400 200 430C270 400 340 320 340 220V90L200 20Z" fill="url(#shieldGrad)" stroke="rgba(59,130,246,0.3)" stroke-width="2"/>
+        <!-- Shield inner -->
+        <path d="M200 50L90 108V218C90 302 148 370 200 396C252 370 310 302 310 218V108L200 50Z" fill="rgba(10,14,26,0.6)" stroke="rgba(59,130,246,0.15)" stroke-width="1"/>
+        <!-- Lock body -->
+        <rect x="160" y="200" width="80" height="60" rx="8" fill="rgba(59,130,246,0.2)" stroke="var(--accent-light)" stroke-width="2.5"/>
+        <!-- Lock shackle -->
+        <path d="M175 200V175C175 160 185 148 200 148C215 148 225 160 225 175V200" fill="none" stroke="var(--accent-light)" stroke-width="2.5" stroke-linecap="round"/>
+        <!-- Keyhole -->
+        <circle cx="200" cy="222" r="8" fill="var(--accent-light)"/>
+        <rect x="197" y="226" width="6" height="14" rx="3" fill="var(--accent-light)"/>
+        <!-- Checkmark -->
+        <path d="M170 310L190 330L230 290" stroke="#4caf50" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Decorative circles -->
+        <circle cx="80" cy="60" r="6" fill="rgba(59,130,246,0.3)">
+          <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="330" cy="80" r="4" fill="rgba(244,197,66,0.4)">
+          <animate attributeName="opacity" values="0.4;0.9;0.4" dur="4s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="350" cy="300" r="5" fill="rgba(59,130,246,0.3)">
+          <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3.5s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="50" cy="350" r="3" fill="rgba(244,197,66,0.3)">
+          <animate attributeName="opacity" values="0.3;0.8;0.3" dur="4.5s" repeatCount="indefinite"/>
+        </circle>
+        <!-- Small floating icons -->
+        <g opacity="0.5">
+          <rect x="320" y="170" width="28" height="28" rx="6" fill="rgba(59,130,246,0.12)" stroke="rgba(59,130,246,0.25)" stroke-width="1"/>
+          <text x="334" y="189" font-size="14" text-anchor="middle" fill="var(--accent-light)" font-family="'Font Awesome 6 Free'" font-weight="900">&#xf3ed;</text>
+        </g>
+        <g opacity="0.4">
+          <rect x="44" y="180" width="28" height="28" rx="6" fill="rgba(244,197,66,0.1)" stroke="rgba(244,197,66,0.2)" stroke-width="1"/>
+          <text x="58" y="199" font-size="14" text-anchor="middle" fill="var(--gold)" font-family="'Font Awesome 6 Free'" font-weight="900">&#xf06a;</text>
+        </g>
+        <defs>
+          <linearGradient id="shieldGrad" x1="200" y1="20" x2="200" y2="430" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="rgba(30,58,138,0.4)"/>
+            <stop offset="100%" stop-color="rgba(30,58,138,0.08)"/>
+          </linearGradient>
+        </defs>
+      </svg>
     </div>
   </div>
-  <div class="hero-stats">
-    <div class="stat"><div class="num">2.8 млн</div><div class="lbl">Жертв в 2025</div></div>
-    <div class="stat"><div class="num">100 млрд ₸</div><div class="lbl">Украдено</div></div>
-    <div class="stat"><div class="num">12+</div><div class="lbl">Схем разобрано</div></div>
-    <div class="stat"><div class="num">100%</div><div class="lbl">Бесплатно</div></div>
-  </div>
 </section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-bar-inner">
+    <div class="stat-card fade-in">
+      <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+      <div class="num">2.8 млн</div>
+      <div class="lbl">Жертв в 2025</div>
+    </div>
+    <div class="stat-card fade-in">
+      <div class="stat-icon gold"><i class="fa-solid fa-coins"></i></div>
+      <div class="num blue">100 млрд ₸</div>
+      <div class="lbl">Украдено</div>
+    </div>
+    <div class="stat-card fade-in">
+      <div class="stat-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+      <div class="num">12+</div>
+      <div class="lbl">Схем разобрано</div>
+    </div>
+    <div class="stat-card fade-in">
+      <div class="stat-icon gold"><i class="fa-solid fa-lock-open"></i></div>
+      <div class="num blue">100%</div>
+      <div class="lbl">Бесплатно</div>
+    </div>
+  </div>
+</div>
 
 <!-- WHY IT MATTERS -->
 <section>
@@ -54,22 +122,22 @@
 
   <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); gap:24px;">
     <div class="card fade-in" style="text-align:center; padding:36px 24px;">
-      <div style="font-size:40px; margin-bottom:16px;">📱</div>
+      <div style="font-size:40px; margin-bottom:16px; color:var(--accent-light);"><i class="fa-solid fa-mobile-screen-button"></i></div>
       <h3 style="font-size:1.1rem; margin-bottom:10px;">Телефонные схемы</h3>
       <p style="font-size:0.88rem; color:var(--text-muted);">Звонки от «банков», «полиции», «родственников в беде» — самый распространённый вид мошенничества.</p>
     </div>
     <div class="card fade-in" style="text-align:center; padding:36px 24px;">
-      <div style="font-size:40px; margin-bottom:16px;">💻</div>
+      <div style="font-size:40px; margin-bottom:16px; color:var(--accent-light);"><i class="fa-solid fa-laptop"></i></div>
       <h3 style="font-size:1.1rem; margin-bottom:10px;">Онлайн-мошенничество</h3>
       <p style="font-size:0.88rem; color:var(--text-muted);">Фишинговые сайты, поддельные магазины, фейковые розыгрыши — интернет полон ловушек.</p>
     </div>
     <div class="card fade-in" style="text-align:center; padding:36px 24px;">
-      <div style="font-size:40px; margin-bottom:16px;">💰</div>
+      <div style="font-size:40px; margin-bottom:16px; color:var(--accent-light);"><i class="fa-solid fa-coins"></i></div>
       <h3 style="font-size:1.1rem; margin-bottom:10px;">Финансовые пирамиды</h3>
       <p style="font-size:0.88rem; color:var(--text-muted);">Обещания «гарантированного дохода» и «инвестиций без риска» — прямой путь к потере денег.</p>
     </div>
     <div class="card fade-in" style="text-align:center; padding:36px 24px;">
-      <div style="font-size:40px; margin-bottom:16px;">🤖</div>
+      <div style="font-size:40px; margin-bottom:16px; color:var(--accent-light);"><i class="fa-solid fa-robot"></i></div>
       <h3 style="font-size:1.1rem; margin-bottom:10px;">Deepfake и ИИ</h3>
       <p style="font-size:0.88rem; color:var(--text-muted);">Новые технологии позволяют подделывать голос и видео. Мошенники идут в ногу со временем.</p>
     </div>
@@ -84,25 +152,25 @@
 
   <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px,1fr)); gap:24px;">
     <a href="schemes.html" class="card fade-in" style="padding:32px; display:block;">
-      <div style="font-size:32px; margin-bottom:16px;">🕵️</div>
+      <div style="font-size:32px; margin-bottom:16px; color:var(--accent-light);"><i class="fa-solid fa-user-secret"></i></div>
       <h3 style="font-size:1.15rem; margin-bottom:8px;">Каталог схем</h3>
       <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:16px;">12 подробно разобранных схем мошенников с красными флагами и рекомендациями.</p>
       <span style="color:var(--accent-light); font-weight:600; font-size:0.85rem;">Изучить →</span>
     </a>
     <a href="quiz.html" class="card fade-in" style="padding:32px; display:block;">
-      <div style="font-size:32px; margin-bottom:16px;">🧠</div>
+      <div style="font-size:32px; margin-bottom:16px; color:var(--gold);"><i class="fa-solid fa-brain"></i></div>
       <h3 style="font-size:1.15rem; margin-bottom:8px;">Тест на знания</h3>
       <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:16px;">10 реалистичных сценариев. Проверьте, сможете ли вы распознать мошенников.</p>
       <span style="color:var(--accent-light); font-weight:600; font-size:0.85rem;">Пройти тест →</span>
     </a>
     <a href="guides.html" class="card fade-in" style="padding:32px; display:block;">
-      <div style="font-size:32px; margin-bottom:16px;">📖</div>
+      <div style="font-size:32px; margin-bottom:16px; color:var(--accent-light);"><i class="fa-solid fa-book-open"></i></div>
       <h3 style="font-size:1.15rem; margin-bottom:8px;">Гайды по безопасности</h3>
       <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:16px;">8 подробных руководств: от паролей до защиты пожилых родственников.</p>
       <span style="color:var(--accent-light); font-weight:600; font-size:0.85rem;">Читать →</span>
     </a>
     <a href="contacts.html" class="card fade-in" style="padding:32px; display:block;">
-      <div style="font-size:32px; margin-bottom:16px;">🆘</div>
+      <div style="font-size:32px; margin-bottom:16px; color:var(--gold);"><i class="fa-solid fa-life-ring"></i></div>
       <h3 style="font-size:1.15rem; margin-bottom:8px;">Экстренная помощь</h3>
       <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:16px;">Что делать, если вас обманули. Контакты экстренных служб и пошаговый план.</p>
       <span style="color:var(--accent-light); font-weight:600; font-size:0.85rem;">Контакты →</span>
@@ -142,7 +210,7 @@
     <div class="footer-brand">
       <a href="index.html" class="nav-logo" style="font-size:1.6rem;">P<span class="accent-letter">E</span>ASE</a>
       <p>Образовательный проект о защите от мошенничества. Защити себя и близких.</p>
-      <a href="https://instagram.com/pease_project" target="_blank" rel="noopener" style="color:var(--accent-light); font-size:0.85rem; text-decoration:none;">📸 @pease_project</a>
+      <a href="https://www.instagram.com/pease_project" target="_blank" rel="noopener" style="color:var(--accent-light); font-size:0.85rem; text-decoration:none;"><i class="fa-brands fa-instagram"></i> @pease_project</a>
     </div>
     <div class="footer-col">
       <h4>Разделы</h4>
