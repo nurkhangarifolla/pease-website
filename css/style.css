@@ -1086,6 +1086,94 @@ section { padding: var(--section-pad); }
 
 #toast.show { transform: translateY(0); opacity: 1; }
 
+/* ── WHY IT MATTERS GRID ── */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.why-card {
+  text-align: center;
+  padding: 36px 24px;
+}
+
+.why-icon {
+  font-size: 40px;
+  margin-bottom: 16px;
+  color: var(--accent-light);
+}
+
+.why-card h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  letter-spacing: 0;
+}
+
+.why-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+/* ── LINKS GRID ── */
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.link-card {
+  padding: 32px;
+  display: block;
+}
+
+.link-icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.link-info h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+  letter-spacing: 0;
+}
+
+.link-info p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.link-arrow {
+  color: var(--accent-light);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* ── NUMBER STATS GRID ── */
+.num-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.num-card {
+  text-align: center;
+  padding: 28px;
+}
+
+.num-val {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.6rem;
+}
+
+.num-lbl {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
 /* ── FADE-IN ANIMATION ── */
 .fade-in {
   opacity: 0;
@@ -1100,7 +1188,12 @@ section { padding: var(--section-pad); }
 
 /* ── MOBILE ── */
 @media (max-width: 768px) {
-  :root { --section-pad: 60px 5%; }
+  :root { --section-pad: 48px 5%; }
+
+  /* Nav */
+  .nav { padding: 0 5%; height: 60px; }
+
+  .nav-logo { font-size: 1.5rem; letter-spacing: 2px; }
 
   .nav-links {
     display: none;
@@ -1110,7 +1203,7 @@ section { padding: var(--section-pad); }
   .nav-links.open {
     display: flex;
     position: absolute;
-    top: 68px; left: 0; right: 0;
+    top: 60px; left: 0; right: 0;
     background: rgba(10,14,26,0.98);
     border-bottom: 1px solid rgba(255,255,255,0.06);
   }
@@ -1120,56 +1213,162 @@ section { padding: var(--section-pad); }
   }
 
   .nav-links.open a {
-    display: block; padding: 14px 6%;
+    display: block; padding: 16px 6%;
+    font-size: 0.95rem;
   }
 
   .hamburger { display: flex; }
 
-  .hero { min-height: 50vh; padding: 100px 5% 40px; }
+  /* Hero base */
+  .hero { min-height: 50vh; padding: 80px 5% 32px; }
   .hero h1 { font-size: clamp(1.8rem, 8vw, 2.8rem); }
   .hero-stats { flex-wrap: wrap; gap: 20px; }
 
+  /* Hero fullimg — taller, better image positioning */
   .hero-fullimg {
-    min-height: 70vh;
-    padding: 0 5% 40px;
+    min-height: 85vh;
+    padding: 0 5% 32px;
+  }
+
+  .hero-bg-img {
+    object-position: center 20%;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      to top,
+      rgba(10,14,26,0.97) 0%,
+      rgba(10,14,26,0.7) 35%,
+      rgba(10,14,26,0.2) 65%,
+      transparent 100%
+    );
   }
 
   .hero-fullimg .hero-content {
     max-width: 100%;
   }
 
-  .hero-content {
-    max-width: 100%;
+  .hero-fullimg .hero-badge {
+    font-size: 0.65rem;
+    padding: 4px 12px;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
   }
 
-  .hero p {
-    max-width: 100%;
+  .hero-fullimg h1 {
+    font-size: clamp(2rem, 10vw, 3.2rem);
+    margin-bottom: 12px;
   }
 
+  .hero-fullimg p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+
+  /* Full-width stacked buttons */
+  .hero-fullimg .btn-group {
+    flex-direction: column;
+  }
+
+  .hero-fullimg .btn-group .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 28px;
+    font-size: 0.95rem;
+  }
+
+  .hero-content { max-width: 100%; }
+  .hero p { max-width: 100%; }
+
+  /* Inner page hero decor */
   .hero-decor {
     font-size: 160px;
     right: 5%;
     opacity: 0.05;
   }
 
-  .stats-bar { margin-top: -20px; padding: 0 5%; }
-  .stats-bar-inner { grid-template-columns: 1fr 1fr; gap: 12px; }
-  .stat-card { padding: 24px 14px; }
-  .stat-card .num { font-size: 2.2rem; }
+  /* Stats bar — compact 2-col */
+  .stats-bar { margin-top: -16px; padding: 0 5%; }
+  .stats-bar-inner { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .stat-card { padding: 18px 10px; border-radius: 10px; }
+  .stat-card .stat-icon { font-size: 1.1rem; margin-bottom: 8px; }
+  .stat-card .num { font-size: 1.8rem; margin-bottom: 4px; }
+  .stat-card .lbl { font-size: 0.65rem; letter-spacing: 0.5px; }
 
+  /* Why-it-matters — compact 2-col */
+  .why-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .why-card { padding: 20px 14px; }
+  .why-icon { font-size: 28px; margin-bottom: 10px; }
+  .why-card h3 { font-size: 0.85rem; margin-bottom: 6px; }
+  .why-card p { font-size: 0.76rem; line-height: 1.5; }
+
+  /* Links grid — horizontal card layout on mobile */
+  .links-grid { grid-template-columns: 1fr; gap: 12px; }
+  .link-card {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .link-icon {
+    font-size: 24px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+    width: 48px; height: 48px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.04);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .link-info { flex: 1; }
+  .link-info h3 { font-size: 0.95rem; margin-bottom: 4px; }
+  .link-info p { font-size: 0.8rem; margin-bottom: 8px; line-height: 1.5; }
+  .link-arrow { font-size: 0.8rem; }
+
+  /* Number stats — 2-col */
+  .num-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .num-card { padding: 20px 14px; }
+  .num-val { font-size: 2rem; }
+  .num-lbl { font-size: 0.72rem; }
+
+  /* Section spacing */
+  .section-title { font-size: clamp(1.5rem, 5vw, 2rem); margin-bottom: 10px; }
+  .section-sub { margin-bottom: 28px; font-size: 0.88rem; }
+  .section-tag { font-size: 0.7rem; letter-spacing: 2px; margin-bottom: 8px; }
+
+  /* Scheme/guide grids */
   .schemes-grid,
   .guides-grid { grid-template-columns: 1fr; }
 
   .contacts-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
+
+  /* Footer */
+  .footer { padding: 40px 5% 20px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px; }
+  .footer-brand { grid-column: 1 / -1; text-align: center; }
+  .footer-brand .nav-logo { justify-content: center; }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+    padding-top: 16px;
+  }
+
   .form-row { grid-template-columns: 1fr; }
   .quiz-question-card { padding: 24px 18px; }
   .quiz-score { flex-direction: column; }
 }
 
 @media (max-width: 480px) {
-  .footer-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; text-align: center; }
+  .footer-col { text-align: center; }
   .hero-stats { justify-content: center; }
   .filter-bar { justify-content: center; }
   .stats-bar-inner { grid-template-columns: 1fr 1fr; }
+
+  .why-grid { gap: 8px; }
+  .why-card { padding: 16px 10px; }
+  .why-icon { font-size: 24px; margin-bottom: 8px; }
+  .why-card h3 { font-size: 0.8rem; }
+  .why-card p { font-size: 0.72rem; }
 }
