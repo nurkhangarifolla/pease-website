@@ -1213,7 +1213,7 @@ section { padding: var(--section-pad); }
   }
 
   .nav-links.open a {
-    display: block; padding: 16px 6%;
+    display: block; padding: 16px;
     font-size: 0.95rem;
   }
 
