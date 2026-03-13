@@ -175,35 +175,53 @@ a { color: inherit; text-decoration: none; }
   max-width: 540px;
 }
 
-/* ── HERO SPLIT LAYOUT ── */
-.hero-split {
+/* ── HERO FULL IMAGE LAYOUT ── */
+.hero-fullimg {
+  min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 60px;
+  align-items: flex-end;
+  padding: 0 6% 80px;
+  background: var(--navy);
+}
+
+.hero-fullimg::before {
+  display: none;
+}
+
+.hero-bg-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  position: relative;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10,14,26,0.95) 0%,
+    rgba(10,14,26,0.6) 40%,
+    rgba(10,14,26,0.15) 70%,
+    transparent 100%
+  );
   z-index: 1;
 }
 
-.hero-split .hero-content {
-  flex: 1;
-  max-width: 560px;
-}
-
-.hero-illustration {
-  flex: 0 0 480px;
-  max-width: 480px;
+.hero-fullimg .hero-content {
   position: relative;
-  animation: float 6s ease-in-out infinite;
+  z-index: 2;
+  max-width: 680px;
 }
 
-.hero-illustration img {
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
-  border: 2px solid rgba(59,130,246,0.2);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 40px rgba(30,58,138,0.2);
+.hero-fullimg .hero-badge {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 /* Decorative hero illustration for inner pages */
@@ -1111,12 +1129,12 @@ section { padding: var(--section-pad); }
   .hero h1 { font-size: clamp(1.8rem, 8vw, 2.8rem); }
   .hero-stats { flex-wrap: wrap; gap: 20px; }
 
-  .hero-split {
-    flex-direction: column;
-    gap: 32px;
+  .hero-fullimg {
+    min-height: 70vh;
+    padding: 0 5% 40px;
   }
 
-  .hero-split .hero-content {
+  .hero-fullimg .hero-content {
     max-width: 100%;
   }
 
@@ -1126,12 +1144,6 @@ section { padding: var(--section-pad); }
 
   .hero p {
     max-width: 100%;
-  }
-
-  .hero-illustration {
-    flex: none;
-    max-width: 320px;
-    margin: 0 auto;
   }
 
   .hero-decor {
