@@ -127,6 +127,20 @@ a { color: inherit; text-decoration: none; }
 .hamburger.active span:nth-child(2) { opacity: 0; }
 .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
+/* ── Language Toggle ── */
+.lang-toggle {
+  background: none; border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 20px; padding: 4px 12px; cursor: pointer;
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em;
+  color: var(--text-muted); display: flex; align-items: center; gap: 5px;
+  transition: border-color 0.2s; font-family: 'Manrope', sans-serif;
+  margin-left: 12px;
+}
+.lang-toggle:hover { border-color: var(--accent-light); }
+.lang-sep { opacity: 0.3; }
+.lang-option { cursor: pointer; transition: color 0.2s; padding: 2px 0; }
+.lang-option.active { color: var(--accent-light); }
+
 /* ── HERO (shared base) ── */
 .hero {
   min-height: 60vh;

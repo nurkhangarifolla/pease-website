@@ -7,19 +7,24 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
+<body data-i18n-title="index_title">
 
 <!-- NAV -->
 <nav class="nav">
   <a href="index.html" class="nav-logo">P<span class="accent-letter">E</span>ASE</a>
   <ul class="nav-links" id="navLinks">
-    <li><a href="index.html" class="active">Главная</a></li>
-    <li><a href="schemes.html">Схемы</a></li>
-    <li><a href="quiz.html">Тест</a></li>
-    <li><a href="guides.html">Гайды</a></li>
-    <li><a href="contacts.html">Контакты</a></li>
-    <li><a href="quiz.html" class="nav-cta">Пройти тест</a></li>
+    <li><a href="index.html" class="active" data-i18n="nav_home">Главная</a></li>
+    <li><a href="schemes.html" data-i18n="nav_schemes">Схемы</a></li>
+    <li><a href="quiz.html" data-i18n="nav_quiz">Тест</a></li>
+    <li><a href="guides.html" data-i18n="nav_guides">Гайды</a></li>
+    <li><a href="contacts.html" data-i18n="nav_contacts">Контакты</a></li>
+    <li><a href="quiz.html" class="nav-cta" data-i18n="nav_cta">Пройти тест</a></li>
   </ul>
+  <div class="lang-toggle" id="langToggle">
+    <span class="lang-option active" data-lang="ru">RU</span>
+    <span class="lang-sep">|</span>
+    <span class="lang-option" data-lang="en">EN</span>
+  </div>
   <button class="hamburger" id="hamburger" aria-label="Меню">
     <span></span><span></span><span></span>
   </button>
@@ -30,15 +35,15 @@
   <img src="images/NUimage.jpeg" alt="Назарбаев Университет" class="hero-bg-img">
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-badge">Образовательный проект 2026</div>
-    <h1>Не дай себя<br><span class="accent">обмануть.</span></h1>
-    <p>
+    <div class="hero-badge" data-i18n="index_hero_badge">Образовательный проект 2026</div>
+    <h1 data-i18n="index_hero_h1">Не дай себя<br><span class="accent">обмануть.</span></h1>
+    <p data-i18n="index_hero_p">
       PEASE — образовательная платформа о мошенничестве в интернете.
       Узнайте, как работают популярные схемы обмана и защитите себя и своих близких.
     </p>
     <div class="btn-group">
-      <a href="schemes.html" class="btn btn-accent">Схемы мошенников</a>
-      <a href="quiz.html" class="btn btn-outline">Проверить знания</a>
+      <a href="schemes.html" class="btn btn-accent" data-i18n="index_hero_btn1">Схемы мошенников</a>
+      <a href="quiz.html" class="btn btn-outline" data-i18n="index_hero_btn2">Проверить знания</a>
     </div>
   </div>
 </section>
@@ -48,94 +53,94 @@
   <div class="stats-bar-inner">
     <div class="stat-card fade-in">
       <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
-      <div class="num">2.8 млн</div>
-      <div class="lbl">Жертв в 2025</div>
+      <div class="num" data-i18n="index_stat1_num">2.8 млн</div>
+      <div class="lbl" data-i18n="index_stat1_lbl">Жертв в 2025</div>
     </div>
     <div class="stat-card fade-in">
       <div class="stat-icon gold"><i class="fa-solid fa-coins"></i></div>
-      <div class="num blue">100 млрд ₸</div>
-      <div class="lbl">Украдено</div>
+      <div class="num blue" data-i18n="index_stat2_num">100 млрд ₸</div>
+      <div class="lbl" data-i18n="index_stat2_lbl">Украдено</div>
     </div>
     <div class="stat-card fade-in">
       <div class="stat-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
       <div class="num">12+</div>
-      <div class="lbl">Схем разобрано</div>
+      <div class="lbl" data-i18n="index_stat3_lbl">Схем разобрано</div>
     </div>
     <div class="stat-card fade-in">
       <div class="stat-icon gold"><i class="fa-solid fa-lock-open"></i></div>
       <div class="num blue">100%</div>
-      <div class="lbl">Бесплатно</div>
+      <div class="lbl" data-i18n="index_stat4_lbl">Бесплатно</div>
     </div>
   </div>
 </div>
 
 <!-- WHY IT MATTERS -->
 <section>
-  <div class="section-tag">Почему это важно</div>
-  <h2 class="section-title">Каждые 9 секунд — новая жертва</h2>
-  <p class="section-sub">Мошенники становятся всё изобретательнее. Знание их методов — ваша лучшая защита.</p>
+  <div class="section-tag" data-i18n="index_why_tag">Почему это важно</div>
+  <h2 class="section-title" data-i18n="index_why_h2">Каждые 9 секунд — новая жертва</h2>
+  <p class="section-sub" data-i18n="index_why_sub">Мошенники становятся всё изобретательнее. Знание их методов — ваша лучшая защита.</p>
 
   <div class="why-grid">
     <div class="card fade-in why-card">
       <div class="why-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
-      <h3>Телефонные схемы</h3>
-      <p>Звонки от «банков», «полиции», «родственников в беде» — самый распространённый вид мошенничества.</p>
+      <h3 data-i18n="index_why1_h3">Телефонные схемы</h3>
+      <p data-i18n="index_why1_p">Звонки от «банков», «полиции», «родственников в беде» — самый распространённый вид мошенничества.</p>
     </div>
     <div class="card fade-in why-card">
       <div class="why-icon"><i class="fa-solid fa-laptop"></i></div>
-      <h3>Онлайн-мошенничество</h3>
-      <p>Фишинговые сайты, поддельные магазины, фейковые розыгрыши — интернет полон ловушек.</p>
+      <h3 data-i18n="index_why2_h3">Онлайн-мошенничество</h3>
+      <p data-i18n="index_why2_p">Фишинговые сайты, поддельные магазины, фейковые розыгрыши — интернет полон ловушек.</p>
     </div>
     <div class="card fade-in why-card">
       <div class="why-icon"><i class="fa-solid fa-coins"></i></div>
-      <h3>Финансовые пирамиды</h3>
-      <p>Обещания «гарантированного дохода» и «инвестиций без риска» — прямой путь к потере денег.</p>
+      <h3 data-i18n="index_why3_h3">Финансовые пирамиды</h3>
+      <p data-i18n="index_why3_p">Обещания «гарантированного дохода» и «инвестиций без риска» — прямой путь к потере денег.</p>
     </div>
     <div class="card fade-in why-card">
       <div class="why-icon"><i class="fa-solid fa-robot"></i></div>
-      <h3>Deepfake и ИИ</h3>
-      <p>Новые технологии позволяют подделывать голос и видео. Мошенники идут в ногу со временем.</p>
+      <h3 data-i18n="index_why4_h3">Deepfake и ИИ</h3>
+      <p data-i18n="index_why4_p">Новые технологии позволяют подделывать голос и видео. Мошенники идут в ногу со временем.</p>
     </div>
   </div>
 </section>
 
 <!-- QUICK LINKS -->
 <section style="background:var(--card-bg);">
-  <div class="section-tag">Разделы сайта</div>
-  <h2 class="section-title">Изучите и защитите себя</h2>
-  <p class="section-sub">Всё, что нужно знать о безопасности в интернете — в одном месте.</p>
+  <div class="section-tag" data-i18n="index_links_tag">Разделы сайта</div>
+  <h2 class="section-title" data-i18n="index_links_h2">Изучите и защитите себя</h2>
+  <p class="section-sub" data-i18n="index_links_sub">Всё, что нужно знать о безопасности в интернете — в одном месте.</p>
 
   <div class="links-grid">
     <a href="schemes.html" class="card fade-in link-card">
       <div class="link-icon" style="color:var(--accent-light);"><i class="fa-solid fa-user-secret"></i></div>
       <div class="link-info">
-        <h3>Каталог схем</h3>
-        <p>12 подробно разобранных схем мошенников с красными флагами и рекомендациями.</p>
-        <span class="link-arrow">Изучить →</span>
+        <h3 data-i18n="index_link1_h3">Каталог схем</h3>
+        <p data-i18n="index_link1_p">12 подробно разобранных схем мошенников с красными флагами и рекомендациями.</p>
+        <span class="link-arrow" data-i18n="index_link1_arrow">Изучить →</span>
       </div>
     </a>
     <a href="quiz.html" class="card fade-in link-card">
       <div class="link-icon" style="color:var(--gold);"><i class="fa-solid fa-brain"></i></div>
       <div class="link-info">
-        <h3>Тест на знания</h3>
-        <p>10 реалистичных сценариев. Проверьте, сможете ли вы распознать мошенников.</p>
-        <span class="link-arrow">Пройти тест →</span>
+        <h3 data-i18n="index_link2_h3">Тест на знания</h3>
+        <p data-i18n="index_link2_p">10 реалистичных сценариев. Проверьте, сможете ли вы распознать мошенников.</p>
+        <span class="link-arrow" data-i18n="index_link2_arrow">Пройти тест →</span>
       </div>
     </a>
     <a href="guides.html" class="card fade-in link-card">
       <div class="link-icon" style="color:var(--accent-light);"><i class="fa-solid fa-book-open"></i></div>
       <div class="link-info">
-        <h3>Гайды по безопасности</h3>
-        <p>8 подробных руководств: от паролей до защиты пожилых родственников.</p>
-        <span class="link-arrow">Читать →</span>
+        <h3 data-i18n="index_link3_h3">Гайды по безопасности</h3>
+        <p data-i18n="index_link3_p">8 подробных руководств: от паролей до защиты пожилых родственников.</p>
+        <span class="link-arrow" data-i18n="index_link3_arrow">Читать →</span>
       </div>
     </a>
     <a href="contacts.html" class="card fade-in link-card">
       <div class="link-icon" style="color:var(--gold);"><i class="fa-solid fa-life-ring"></i></div>
       <div class="link-info">
-        <h3>Экстренная помощь</h3>
-        <p>Что делать, если вас обманули. Контакты экстренных служб и пошаговый план.</p>
-        <span class="link-arrow">Контакты →</span>
+        <h3 data-i18n="index_link4_h3">Экстренная помощь</h3>
+        <p data-i18n="index_link4_p">Что делать, если вас обманули. Контакты экстренных служб и пошаговый план.</p>
+        <span class="link-arrow" data-i18n="index_link4_arrow">Контакты →</span>
       </div>
     </a>
   </div>
@@ -143,26 +148,26 @@
 
 <!-- STATS SECTION -->
 <section>
-  <div class="section-tag">Статистика</div>
-  <h2 class="section-title">Мошенничество в цифрах</h2>
-  <p class="section-sub">Данные за 2025 год по Казахстану. Источник: АРРФР, МВД РК.</p>
+  <div class="section-tag" data-i18n="index_stats_tag">Статистика</div>
+  <h2 class="section-title" data-i18n="index_stats_h2">Мошенничество в цифрах</h2>
+  <p class="section-sub" data-i18n="index_stats_sub">Данные за 2025 год по Казахстану. Источник: АРРФР, МВД РК.</p>
 
   <div class="num-grid">
     <div class="card fade-in num-card">
       <div class="num-val" style="color:var(--accent-light);">67%</div>
-      <div class="num-lbl">жертв — люди 25–55 лет</div>
+      <div class="num-lbl" data-i18n="index_num1_lbl">жертв — люди 25–55 лет</div>
     </div>
     <div class="card fade-in num-card">
       <div class="num-val" style="color:var(--gold);">40%</div>
-      <div class="num-lbl">атак — через телефон</div>
+      <div class="num-lbl" data-i18n="index_num2_lbl">атак — через телефон</div>
     </div>
     <div class="card fade-in num-card">
       <div class="num-val" style="color:var(--accent-light);">87%</div>
-      <div class="num-lbl">денег не возвращают</div>
+      <div class="num-lbl" data-i18n="index_num3_lbl">денег не возвращают</div>
     </div>
     <div class="card fade-in num-card">
       <div class="num-val" style="color:var(--gold);">3 мин</div>
-      <div class="num-lbl">среднее время атаки</div>
+      <div class="num-lbl" data-i18n="index_num4_lbl">среднее время атаки</div>
     </div>
   </div>
 </section>
@@ -172,41 +177,42 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <a href="index.html" class="nav-logo" style="font-size:1.6rem;">P<span class="accent-letter">E</span>ASE</a>
-      <p>Образовательный проект о защите от мошенничества. Защити себя и близких.</p>
+      <p data-i18n="footer_tagline">Образовательный проект о защите от мошенничества. Защити себя и близких.</p>
       <a href="https://www.instagram.com/pease_project" target="_blank" rel="noopener" style="color:var(--accent-light); font-size:0.85rem; text-decoration:none;"><i class="fa-brands fa-instagram"></i> @pease_project</a>
     </div>
     <div class="footer-col">
-      <h4>Разделы</h4>
+      <h4 data-i18n="footer_sections">Разделы</h4>
       <ul>
-        <li><a href="schemes.html">Схемы мошенников</a></li>
-        <li><a href="quiz.html">Тест на знания</a></li>
-        <li><a href="guides.html">Гайды</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="schemes.html" data-i18n="footer_link_schemes">Схемы мошенников</a></li>
+        <li><a href="quiz.html" data-i18n="footer_link_quiz">Тест на знания</a></li>
+        <li><a href="guides.html" data-i18n="footer_link_guides">Гайды</a></li>
+        <li><a href="contacts.html" data-i18n="footer_link_contacts">Контакты</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Помощь</h4>
+      <h4 data-i18n="footer_help">Помощь</h4>
       <ul>
-        <li><a href="contacts.html">Что делать если обманули</a></li>
-        <li><a href="contacts.html">Куда звонить</a></li>
-        <li><a href="contacts.html">Сообщить о схеме</a></li>
+        <li><a href="contacts.html" data-i18n="footer_help1">Что делать если обманули</a></li>
+        <li><a href="contacts.html" data-i18n="footer_help2">Куда звонить</a></li>
+        <li><a href="contacts.html" data-i18n="footer_help3">Сообщить о схеме</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>О проекте</h4>
+      <h4 data-i18n="footer_about">О проекте</h4>
       <ul>
-        <li><a href="team.html">Команда PEASE</a></li>
-        <li><a href="sources.html">Источники</a></li>
-        <li><a href="privacy.html">Конфиденциальность</a></li>
+        <li><a href="team.html" data-i18n="footer_about_team">Команда PEASE</a></li>
+        <li><a href="sources.html" data-i18n="footer_about_sources">Источники</a></li>
+        <li><a href="privacy.html" data-i18n="footer_about_privacy">Конфиденциальность</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; 2026 PEASE. Все права защищены.</span>
-    <span>Защити себя и близких</span>
+    <span data-i18n="footer_copyright">&copy; 2026 PEASE. Все права защищены.</span>
+    <span data-i18n="footer_slogan">Защити себя и близких</span>
   </div>
 </footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

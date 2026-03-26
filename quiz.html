@@ -7,19 +7,24 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
+<body data-i18n-title="quiz_title">
 
 <!-- NAV -->
 <nav class="nav">
   <a href="index.html" class="nav-logo">P<span class="accent-letter">E</span>ASE</a>
   <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Главная</a></li>
-    <li><a href="schemes.html">Схемы</a></li>
-    <li><a href="quiz.html" class="active">Тест</a></li>
-    <li><a href="guides.html">Гайды</a></li>
-    <li><a href="contacts.html">Контакты</a></li>
-    <li><a href="quiz.html" class="nav-cta">Пройти тест</a></li>
+    <li><a href="index.html" data-i18n="nav_home">Главная</a></li>
+    <li><a href="schemes.html" data-i18n="nav_schemes">Схемы</a></li>
+    <li><a href="quiz.html" class="active" data-i18n="nav_quiz">Тест</a></li>
+    <li><a href="guides.html" data-i18n="nav_guides">Гайды</a></li>
+    <li><a href="contacts.html" data-i18n="nav_contacts">Контакты</a></li>
+    <li><a href="quiz.html" class="nav-cta" data-i18n="nav_cta">Пройти тест</a></li>
   </ul>
+  <div class="lang-toggle" id="langToggle">
+    <span class="lang-option active" data-lang="ru">RU</span>
+    <span class="lang-sep">|</span>
+    <span class="lang-option" data-lang="en">EN</span>
+  </div>
   <button class="hamburger" id="hamburger" aria-label="Меню">
     <span></span><span></span><span></span>
   </button>
@@ -28,9 +33,9 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-badge">Проверка знаний</div>
-    <h1>Сможешь ли ты<br><span class="accent">распознать обман?</span></h1>
-    <p>10 реалистичных сценариев — от SMS до deepfake-звонков. Три уровня сложности: новичок, продвинутый, эксперт. Проверьте, насколько вы защищены от мошенников.</p>
+    <div class="hero-badge" data-i18n="quiz_hero_badge">Проверка знаний</div>
+    <h1 data-i18n="quiz_hero_h1">Сможешь ли ты<br><span class="accent">распознать обман?</span></h1>
+    <p data-i18n="quiz_hero_p">10 реалистичных сценариев — от SMS до deepfake-звонков. Три уровня сложности: новичок, продвинутый, эксперт. Проверьте, насколько вы защищены от мошенников.</p>
   </div>
 </section>
 
@@ -46,41 +51,42 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <a href="index.html" class="nav-logo" style="font-size:1.6rem;">P<span class="accent-letter">E</span>ASE</a>
-      <p>Образовательный проект о защите от мошенничества. Защити себя и близких.</p>
+      <p data-i18n="footer_tagline">Образовательный проект о защите от мошенничества. Защити себя и близких.</p>
       <a href="https://www.instagram.com/pease_project" target="_blank" rel="noopener" style="color:var(--accent-light); font-size:0.85rem; text-decoration:none;"><i class="fa-brands fa-instagram"></i> @pease_project</a>
     </div>
     <div class="footer-col">
-      <h4>Разделы</h4>
+      <h4 data-i18n="footer_sections">Разделы</h4>
       <ul>
-        <li><a href="schemes.html">Схемы мошенников</a></li>
-        <li><a href="quiz.html">Тест на знания</a></li>
-        <li><a href="guides.html">Гайды</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="schemes.html" data-i18n="footer_link_schemes">Схемы мошенников</a></li>
+        <li><a href="quiz.html" data-i18n="footer_link_quiz">Тест на знания</a></li>
+        <li><a href="guides.html" data-i18n="footer_link_guides">Гайды</a></li>
+        <li><a href="contacts.html" data-i18n="footer_link_contacts">Контакты</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Помощь</h4>
+      <h4 data-i18n="footer_help">Помощь</h4>
       <ul>
-        <li><a href="contacts.html">Что делать если обманули</a></li>
-        <li><a href="contacts.html">Куда звонить</a></li>
-        <li><a href="contacts.html">Сообщить о схеме</a></li>
+        <li><a href="contacts.html" data-i18n="footer_help1">Что делать если обманули</a></li>
+        <li><a href="contacts.html" data-i18n="footer_help2">Куда звонить</a></li>
+        <li><a href="contacts.html" data-i18n="footer_help3">Сообщить о схеме</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>О проекте</h4>
+      <h4 data-i18n="footer_about">О проекте</h4>
       <ul>
-        <li><a href="team.html">Команда PEASE</a></li>
-        <li><a href="sources.html">Источники</a></li>
-        <li><a href="privacy.html">Конфиденциальность</a></li>
+        <li><a href="team.html" data-i18n="footer_about_team">Команда PEASE</a></li>
+        <li><a href="sources.html" data-i18n="footer_about_sources">Источники</a></li>
+        <li><a href="privacy.html" data-i18n="footer_about_privacy">Конфиденциальность</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; 2026 PEASE. Все права защищены.</span>
-    <span>Защити себя и близких</span>
+    <span data-i18n="footer_copyright">&copy; 2026 PEASE. Все права защищены.</span>
+    <span data-i18n="footer_slogan">Защити себя и близких</span>
   </div>
 </footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

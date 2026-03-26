@@ -131,6 +131,11 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.textContent = 'Отправка...';
       btn.disabled = true;
 
+      const lang = window.currentLang || localStorage.getItem('pease_lang') || 'ru';
+      const T = window.I18N && window.I18N.translations && window.I18N.translations[lang];
+      const toastOk  = (T && T.toast_success) || 'Спасибо! Ваше сообщение отправлено.';
+      const toastErr = (T && T.toast_error)   || 'Ошибка отправки. Попробуйте позже.';
+
       emailjs.send('service_ysoz63p', 'template_uec68id', {
         name: reportForm.name.value,
         email: reportForm.email.value,
@@ -138,10 +143,10 @@ document.addEventListener('DOMContentLoaded', () => {
         description: reportForm.description.value,
         evidence: reportForm.evidence.value
       }).then(() => {
-        showToast('Спасибо! Ваше сообщение отправлено.');
+        showToast(toastOk);
         reportForm.reset();
       }).catch(() => {
-        showToast('Ошибка отправки. Попробуйте позже.');
+        showToast(toastErr);
       }).finally(() => {
         btn.textContent = originalText;
         btn.disabled = false;
@@ -306,6 +311,17 @@ document.addEventListener('DOMContentLoaded', () => {
   let score = 0;
   let answered = false;
 
+  function getActiveData() {
+    const lang = window.currentLang || localStorage.getItem('pease_lang') || 'ru';
+    if (lang === 'en' && window.QUIZ_DATA && window.QUIZ_DATA.en) return window.QUIZ_DATA.en;
+    return quizData;
+  }
+
+  function getUI() {
+    const lang = window.currentLang || localStorage.getItem('pease_lang') || 'ru';
+    return (window.QUIZ_UI && window.QUIZ_UI[lang]) || window.QUIZ_UI.ru;
+  }
+
   function getLevelClass(level) {
     if (level === 'beginner') return 'level-beginner';
     if (level === 'intermediate') return 'level-intermediate';
@@ -325,19 +341,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function renderQuestion() {
-    const q = quizData[currentQuestion];
+    const data = getActiveData();
+    const ui = getUI();
+    const q = data[currentQuestion];
     const shuffled = shuffleOptions(q);
     const letters = ['А', 'Б', 'В', 'Г'];
     answered = false;
 
-    const progress = ((currentQuestion) / quizData.length) * 100;
+    const progress = (currentQuestion / data.length) * 100;
 
     quizContainer.innerHTML = `
       <div class="quiz-progress">
         <div class="progress-bar"><div class="progress-fill" style="width:${progress}%"></div></div>
-        <span class="progress-text">${currentQuestion + 1} / ${quizData.length}</span>
+        <span class="progress-text">${currentQuestion + 1} / ${data.length}</span>
       </div>
-      <div class="quiz-level-badge ${getLevelClass(q.level)}">${q.levelName} — Вопрос ${currentQuestion + 1}</div>
+      <div class="quiz-level-badge ${getLevelClass(q.level)}">${q.levelName} — ${ui.question} ${currentQuestion + 1}</div>
       <div class="quiz-question-card">
         <div class="quiz-scenario">
           <div class="label"><i class="fa-solid fa-envelope"></i> ${q.scenario}</div>
@@ -353,7 +371,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <div class="quiz-feedback" id="quizFeedback"></div>
         <button class="btn btn-accent quiz-next" id="quizNext">
-          ${currentQuestion < quizData.length - 1 ? 'Следующий вопрос →' : 'Показать результат →'}
+          ${currentQuestion < data.length - 1 ? ui.next : ui.result}
         </button>
       </div>
     `;
@@ -366,7 +384,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Bind next
     document.getElementById('quizNext').addEventListener('click', () => {
       currentQuestion++;
-      if (currentQuestion < quizData.length) {
+      if (currentQuestion < getActiveData().length) {
         renderQuestion();
       } else {
         renderResult();
@@ -378,7 +396,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (answered) return;
     answered = true;
 
-    const q = quizData[currentQuestion];
+    const data = getActiveData();
+    const ui = getUI();
+    const q = data[currentQuestion];
     const options = quizContainer.querySelectorAll('.quiz-option');
     const feedback = document.getElementById('quizFeedback');
     const nextBtn = document.getElementById('quizNext');
@@ -392,10 +412,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (index === correctIndex) {
       score++;
       feedback.className = 'quiz-feedback correct';
-      feedback.innerHTML = '<strong>✓ Правильно!</strong> ' + q.feedback;
+      feedback.innerHTML = '<strong>' + ui.correct + '</strong> ' + q.feedback;
     } else {
       feedback.className = 'quiz-feedback wrong';
-      feedback.innerHTML = '<strong>✗ Неправильно.</strong> ' + q.feedback;
+      feedback.innerHTML = '<strong>' + ui.wrong + '</strong> ' + q.feedback;
     }
 
     feedback.style.display = 'block';
@@ -403,28 +423,31 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function renderResult() {
+    const data = getActiveData();
+    const ui = getUI();
     let badge, title, desc;
-    const pct = Math.round((score / quizData.length) * 100);
+    const pct = Math.round((score / data.length) * 100);
 
     if (score >= 9) {
       badge = '<i class="fa-solid fa-shield-halved"></i>';
-      title = 'Эксперт по безопасности!';
-      desc = 'Вы отлично разбираетесь в схемах мошенников. Поделитесь знаниями с близкими!';
+      title = ui.r_expert_title;
+      desc = ui.r_expert_desc;
     } else if (score >= 7) {
       badge = '<i class="fa-solid fa-thumbs-up"></i>';
-      title = 'Хороший результат!';
-      desc = 'Вы знаете основные схемы, но стоит изучить продвинутые методы мошенников.';
+      title = ui.r_good_title;
+      desc = ui.r_good_desc;
     } else if (score >= 5) {
       badge = '<i class="fa-solid fa-triangle-exclamation"></i>';
-      title = 'Будьте внимательнее!';
-      desc = 'Вы знаете базовые правила, но мошенники могут вас обмануть. Изучите наши гайды.';
+      title = ui.r_warn_title;
+      desc = ui.r_warn_desc;
     } else {
       badge = '<i class="fa-solid fa-circle-exclamation"></i>';
-      title = 'Вы в зоне риска!';
-      desc = 'Мошенники могут легко вас обмануть. Обязательно изучите раздел со схемами и гайды по безопасности.';
+      title = ui.r_bad_title;
+      desc = ui.r_bad_desc;
     }
 
     const resultClass = score >= 8 ? 'great' : score >= 5 ? 'good' : 'poor';
+    const levelLabel = score >= 8 ? ui.lvl_expert : score >= 5 ? ui.lvl_medium : ui.lvl_beginner;
 
     quizContainer.innerHTML = `
       <div class="quiz-question-card quiz-result">
@@ -433,21 +456,21 @@ document.addEventListener('DOMContentLoaded', () => {
         <p style="color:var(--text-muted); margin-bottom:24px;">${desc}</p>
         <div class="quiz-score">
           <div class="score-item">
-            <div class="val">${score}/${quizData.length}</div>
-            <div class="label">Правильных</div>
+            <div class="val">${score}/${data.length}</div>
+            <div class="label">${ui.score_correct}</div>
           </div>
           <div class="score-item">
             <div class="val">${pct}%</div>
-            <div class="label">Точность</div>
+            <div class="label">${ui.score_accuracy}</div>
           </div>
           <div class="score-item">
-            <div class="val">${score >= 8 ? 'Эксперт' : score >= 5 ? 'Средний' : 'Новичок'}</div>
-            <div class="label">Уровень</div>
+            <div class="val">${levelLabel}</div>
+            <div class="label">${ui.score_level}</div>
           </div>
         </div>
         <div class="btn-group" style="justify-content:center; margin-top:16px;">
-          <button class="btn btn-accent" id="quizRestart">Пройти ещё раз</button>
-          <a href="guides.html" class="btn btn-outline">Изучить гайды</a>
+          <button class="btn btn-accent" id="quizRestart">${ui.restart}</button>
+          <a href="guides.html" class="btn btn-outline">${ui.guides_link}</a>
         </div>
       </div>
     `;
@@ -458,6 +481,13 @@ document.addEventListener('DOMContentLoaded', () => {
       renderQuestion();
     });
   }
+
+  // Expose for i18n language switch
+  window.restartQuiz = function () {
+    currentQuestion = 0;
+    score = 0;
+    renderQuestion();
+  };
 
   // Start quiz
   renderQuestion();

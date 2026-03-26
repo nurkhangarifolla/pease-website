@@ -7,19 +7,24 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
+<body data-i18n-title="team_title">
 
 <!-- NAV -->
 <nav class="nav">
   <a href="index.html" class="nav-logo">P<span class="accent-letter">E</span>ASE</a>
   <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Главная</a></li>
-    <li><a href="schemes.html">Схемы</a></li>
-    <li><a href="quiz.html">Тест</a></li>
-    <li><a href="guides.html">Гайды</a></li>
-    <li><a href="contacts.html">Контакты</a></li>
-    <li><a href="quiz.html" class="nav-cta">Пройти тест</a></li>
+    <li><a href="index.html" data-i18n="nav_home">Главная</a></li>
+    <li><a href="schemes.html" data-i18n="nav_schemes">Схемы</a></li>
+    <li><a href="quiz.html" data-i18n="nav_quiz">Тест</a></li>
+    <li><a href="guides.html" data-i18n="nav_guides">Гайды</a></li>
+    <li><a href="contacts.html" data-i18n="nav_contacts">Контакты</a></li>
+    <li><a href="quiz.html" class="nav-cta" data-i18n="nav_cta">Пройти тест</a></li>
   </ul>
+  <div class="lang-toggle" id="langToggle">
+    <span class="lang-option active" data-lang="ru">RU</span>
+    <span class="lang-sep">|</span>
+    <span class="lang-option" data-lang="en">EN</span>
+  </div>
   <button class="hamburger" id="hamburger" aria-label="Меню">
     <span></span><span></span><span></span>
   </button>
@@ -28,109 +33,109 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-badge">О проекте</div>
-    <h1>Команда<br><span class="accent">PEASE</span></h1>
-    <p>Мы — группа студентов, объединённых одной целью: сделать интернет безопаснее для каждого казахстанца. Наш проект помогает людям распознавать мошенничество и защищать себя и своих близких.</p>
+    <div class="hero-badge" data-i18n="team_hero_badge">О проекте</div>
+    <h1 data-i18n="team_hero_h1">Команда<br><span class="accent">PEASE</span></h1>
+    <p data-i18n="team_hero_p">Мы — группа студентов, объединённых одной целью: сделать интернет безопаснее для каждого казахстанца. Наш проект помогает людям распознавать мошенничество и защищать себя и своих близких.</p>
   </div>
 </section>
 
 <!-- MISSION -->
 <section>
-  <div class="section-tag">Наша миссия</div>
-  <h2 class="section-title">Почему мы создали PEASE</h2>
-  <p class="section-sub">Каждый день тысячи казахстанцев становятся жертвами мошенников. Мы верим, что знание — лучшая защита.</p>
+  <div class="section-tag" data-i18n="team_mission_tag">Наша миссия</div>
+  <h2 class="section-title" data-i18n="team_mission_h2">Почему мы создали PEASE</h2>
+  <p class="section-sub" data-i18n="team_mission_sub">Каждый день тысячи казахстанцев становятся жертвами мошенников. Мы верим, что знание — лучшая защита.</p>
 
   <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:24px;">
     <div class="card fade-in" style="text-align:center; padding:36px 24px;">
       <div style="font-size:40px; margin-bottom:16px; color:var(--accent-light);"><i class="fa-solid fa-graduation-cap"></i></div>
-      <h3 style="font-size:1.1rem; margin-bottom:10px;">Образование</h3>
-      <p style="font-size:0.88rem; color:var(--text-muted);">Мы объясняем сложные схемы мошенничества простым и понятным языком, чтобы каждый мог защитить себя.</p>
+      <h3 style="font-size:1.1rem; margin-bottom:10px;" data-i18n="tm1_h3">Образование</h3>
+      <p style="font-size:0.88rem; color:var(--text-muted);" data-i18n="tm1_p">Мы объясняем сложные схемы мошенничества простым и понятным языком, чтобы каждый мог защитить себя.</p>
     </div>
     <div class="card fade-in" style="text-align:center; padding:36px 24px;">
       <div style="font-size:40px; margin-bottom:16px; color:var(--gold);"><i class="fa-solid fa-handshake"></i></div>
-      <h3 style="font-size:1.1rem; margin-bottom:10px;">Доступность</h3>
-      <p style="font-size:0.88rem; color:var(--text-muted);">Все материалы бесплатны и доступны каждому. Мы не продаём услуги — мы помогаем людям.</p>
+      <h3 style="font-size:1.1rem; margin-bottom:10px;" data-i18n="tm2_h3">Доступность</h3>
+      <p style="font-size:0.88rem; color:var(--text-muted);" data-i18n="tm2_p">Все материалы бесплатны и доступны каждому. Мы не продаём услуги — мы помогаем людям.</p>
     </div>
     <div class="card fade-in" style="text-align:center; padding:36px 24px;">
       <div style="font-size:40px; margin-bottom:16px; color:var(--accent-light);"><i class="fa-solid fa-arrows-rotate"></i></div>
-      <h3 style="font-size:1.1rem; margin-bottom:10px;">Актуальность</h3>
-      <p style="font-size:0.88rem; color:var(--text-muted);">Мошенники постоянно придумывают новые схемы. Мы следим за трендами и обновляем информацию.</p>
+      <h3 style="font-size:1.1rem; margin-bottom:10px;" data-i18n="tm3_h3">Актуальность</h3>
+      <p style="font-size:0.88rem; color:var(--text-muted);" data-i18n="tm3_p">Мошенники постоянно придумывают новые схемы. Мы следим за трендами и обновляем информацию.</p>
     </div>
   </div>
 </section>
 
 <!-- TEAM -->
 <section style="background:var(--card-bg);">
-  <div class="section-tag">Наша команда</div>
-  <h2 class="section-title">Кто стоит за проектом</h2>
-  <p class="section-sub">PEASE — это студенческий образовательный проект, созданный для защиты казахстанцев от мошенничества.</p>
+  <div class="section-tag" data-i18n="team_team_tag">Наша команда</div>
+  <h2 class="section-title" data-i18n="team_team_h2">Кто стоит за проектом</h2>
+  <p class="section-sub" data-i18n="team_team_sub">PEASE — это студенческий образовательный проект, созданный для защиты казахстанцев от мошенничества.</p>
 
   <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); gap:24px;">
     <div class="card fade-in" style="text-align:center; padding:36px 24px;">
       <div style="font-size:48px; margin-bottom:16px; color:var(--accent-light);"><i class="fa-solid fa-user"></i></div>
       <h3 style="font-size:1.1rem; margin-bottom:4px;">Nurkhan Garifolla</h3>
-      <p style="font-size:0.82rem; color:var(--accent-light); margin-bottom:12px;">Digital Platform & Content Lead, Organizer</p>
-      <p style="font-size:0.85rem; color:var(--text-muted);">Разработка цифровой платформы, создание контента и координация проекта.</p>
+      <p style="font-size:0.82rem; color:var(--accent-light); margin-bottom:12px;" data-i18n="tp1_role">Digital Platform & Content Lead, Organizer</p>
+      <p style="font-size:0.85rem; color:var(--text-muted);" data-i18n="tp1_desc">Разработка цифровой платформы, создание контента и координация проекта.</p>
     </div>
     <div class="card fade-in" style="text-align:center; padding:36px 24px;">
       <div style="font-size:48px; margin-bottom:16px; color:var(--gold);"><i class="fa-solid fa-user"></i></div>
       <h3 style="font-size:1.1rem; margin-bottom:4px;">Alima Nurguzhayeva</h3>
-      <p style="font-size:0.82rem; color:var(--accent-light); margin-bottom:12px;">Media & Content Lead, Organizer</p>
-      <p style="font-size:0.85rem; color:var(--text-muted);">Медиа-стратегия, создание контента и продвижение проекта.</p>
+      <p style="font-size:0.82rem; color:var(--accent-light); margin-bottom:12px;" data-i18n="tp2_role">Media & Content Lead, Organizer</p>
+      <p style="font-size:0.85rem; color:var(--text-muted);" data-i18n="tp2_desc">Медиа-стратегия, создание контента и продвижение проекта.</p>
     </div>
     <div class="card fade-in" style="text-align:center; padding:36px 24px;">
       <div style="font-size:48px; margin-bottom:16px; color:var(--accent-light);"><i class="fa-solid fa-magnifying-glass"></i></div>
       <h3 style="font-size:1.1rem; margin-bottom:4px;">Assemay Bakhytzhan</h3>
-      <p style="font-size:0.82rem; color:var(--accent-light); margin-bottom:12px;">Researcher, Organizer</p>
-      <p style="font-size:0.85rem; color:var(--text-muted);">Исследование схем мошенничества, анализ данных и проверка фактов.</p>
+      <p style="font-size:0.82rem; color:var(--accent-light); margin-bottom:12px;" data-i18n="tp3_role">Researcher, Organizer</p>
+      <p style="font-size:0.85rem; color:var(--text-muted);" data-i18n="tp3_desc">Исследование схем мошенничества, анализ данных и проверка фактов.</p>
     </div>
     <div class="card fade-in" style="text-align:center; padding:36px 24px;">
       <div style="font-size:48px; margin-bottom:16px; color:var(--gold);"><i class="fa-solid fa-clipboard"></i></div>
       <h3 style="font-size:1.1rem; margin-bottom:4px;">Daryn Kabyken</h3>
-      <p style="font-size:0.82rem; color:var(--accent-light); margin-bottom:12px;">Contract Manager, Organizer</p>
-      <p style="font-size:0.85rem; color:var(--text-muted);">Управление партнёрствами, контрактами и организационная поддержка.</p>
+      <p style="font-size:0.82rem; color:var(--accent-light); margin-bottom:12px;" data-i18n="tp4_role">Contract Manager, Organizer</p>
+      <p style="font-size:0.85rem; color:var(--text-muted);" data-i18n="tp4_desc">Управление партнёрствами, контрактами и организационная поддержка.</p>
     </div>
   </div>
 </section>
 
 <!-- VALUES -->
 <section>
-  <div class="section-tag">Наши ценности</div>
-  <h2 class="section-title">Что означает PEASE</h2>
-  <p class="section-sub">Каждая буква в названии нашей команды отражает ключевую ценность, которой мы руководствуемся.</p>
+  <div class="section-tag" data-i18n="team_values_tag">Наши ценности</div>
+  <h2 class="section-title" data-i18n="team_values_h2">Что означает PEASE</h2>
+  <p class="section-sub" data-i18n="team_values_sub">Каждая буква в названии нашей команды отражает ключевую ценность, которой мы руководствуемся.</p>
 
   <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:24px;">
     <div class="card fade-in" style="padding:32px 24px;">
-      <h3 style="font-size:1.3rem; margin-bottom:10px;"><span style="color:var(--accent-light); font-family:'Bebas Neue',sans-serif; font-size:1.8rem;">P</span> — Patience · Терпение</h3>
-      <p style="font-size:0.88rem; color:var(--text-muted);">Мошенники давят на срочность — мы учим не торопиться. Терпение и спокойствие помогают принимать правильные решения даже под давлением.</p>
+      <h3 style="font-size:1.3rem; margin-bottom:10px;" data-i18n="tv_p"><span style="color:var(--accent-light); font-family:'Bebas Neue',sans-serif; font-size:1.8rem;">P</span> — Patience · Терпение</h3>
+      <p style="font-size:0.88rem; color:var(--text-muted);" data-i18n="tv_p_desc">Мошенники давят на срочность — мы учим не торопиться. Терпение и спокойствие помогают принимать правильные решения даже под давлением.</p>
     </div>
     <div class="card fade-in" style="padding:32px 24px;">
-      <h3 style="font-size:1.3rem; margin-bottom:10px;"><span style="color:var(--accent-light); font-family:'Bebas Neue',sans-serif; font-size:1.8rem;">E</span> — Empathy · Эмпатия</h3>
-      <p style="font-size:0.88rem; color:var(--text-muted);">Жертвой мошенничества может стать каждый. Мы подходим к каждой истории с пониманием и без осуждения — стыд не должен мешать людям обращаться за помощью.</p>
+      <h3 style="font-size:1.3rem; margin-bottom:10px;" data-i18n="tv_e1"><span style="color:var(--accent-light); font-family:'Bebas Neue',sans-serif; font-size:1.8rem;">E</span> — Empathy · Эмпатия</h3>
+      <p style="font-size:0.88rem; color:var(--text-muted);" data-i18n="tv_e1_desc">Жертвой мошенничества может стать каждый. Мы подходим к каждой истории с пониманием и без осуждения — стыд не должен мешать людям обращаться за помощью.</p>
     </div>
     <div class="card fade-in" style="padding:32px 24px;">
-      <h3 style="font-size:1.3rem; margin-bottom:10px;"><span style="color:var(--accent-light); font-family:'Bebas Neue',sans-serif; font-size:1.8rem;">A</span> — Adaptability · Адаптивность</h3>
-      <p style="font-size:0.88rem; color:var(--text-muted);">Мошенники постоянно меняют тактику — мы тоже не стоим на месте. Мы следим за новыми схемами и оперативно обновляем материалы.</p>
+      <h3 style="font-size:1.3rem; margin-bottom:10px;" data-i18n="tv_a"><span style="color:var(--accent-light); font-family:'Bebas Neue',sans-serif; font-size:1.8rem;">A</span> — Adaptability · Адаптивность</h3>
+      <p style="font-size:0.88rem; color:var(--text-muted);" data-i18n="tv_a_desc">Мошенники постоянно меняют тактику — мы тоже не стоим на месте. Мы следим за новыми схемами и оперативно обновляем материалы.</p>
     </div>
     <div class="card fade-in" style="padding:32px 24px;">
-      <h3 style="font-size:1.3rem; margin-bottom:10px;"><span style="color:var(--accent-light); font-family:'Bebas Neue',sans-serif; font-size:1.8rem;">S</span> — Security · Безопасность</h3>
-      <p style="font-size:0.88rem; color:var(--text-muted);">Защита ваших данных и финансов — наш главный приоритет. Мы учим практическим навыкам цифровой безопасности, которые работают в реальной жизни.</p>
+      <h3 style="font-size:1.3rem; margin-bottom:10px;" data-i18n="tv_s"><span style="color:var(--accent-light); font-family:'Bebas Neue',sans-serif; font-size:1.8rem;">S</span> — Security · Безопасность</h3>
+      <p style="font-size:0.88rem; color:var(--text-muted);" data-i18n="tv_s_desc">Защита ваших данных и финансов — наш главный приоритет. Мы учим практическим навыкам цифровой безопасности, которые работают в реальной жизни.</p>
     </div>
     <div class="card fade-in" style="padding:32px 24px;">
-      <h3 style="font-size:1.3rem; margin-bottom:10px;"><span style="color:var(--accent-light); font-family:'Bebas Neue',sans-serif; font-size:1.8rem;">E</span> — Empowerment · Расширение возможностей</h3>
-      <p style="font-size:0.88rem; color:var(--text-muted);">Знание — сила. Мы даём людям инструменты и знания, чтобы они могли самостоятельно распознавать угрозы и защищать себя и своих близких.</p>
+      <h3 style="font-size:1.3rem; margin-bottom:10px;" data-i18n="tv_e2"><span style="color:var(--accent-light); font-family:'Bebas Neue',sans-serif; font-size:1.8rem;">E</span> — Empowerment · Расширение возможностей</h3>
+      <p style="font-size:0.88rem; color:var(--text-muted);" data-i18n="tv_e2_desc">Знание — сила. Мы даём людям инструменты и знания, чтобы они могли самостоятельно распознавать угрозы и защищать себя и своих близких.</p>
     </div>
   </div>
 </section>
 
 <!-- INSTAGRAM -->
 <section style="background:var(--card-bg); text-align:center;">
-  <div class="section-tag">Мы в соцсетях</div>
-  <h2 class="section-title">Подписывайтесь на наш Instagram</h2>
-  <p class="section-sub">Следите за новостями, новыми схемами мошенников и полезными советами по безопасности.</p>
+  <div class="section-tag" data-i18n="team_ig_tag">Мы в соцсетях</div>
+  <h2 class="section-title" data-i18n="team_ig_h2">Подписывайтесь на наш Instagram</h2>
+  <p class="section-sub" data-i18n="team_ig_sub">Следите за новостями, новыми схемами мошенников и полезными советами по безопасности.</p>
   <div class="btn-group" style="justify-content:center;">
-    <a href="https://www.instagram.com/pease_project" target="_blank" rel="noopener" class="btn btn-accent"><i class="fa-brands fa-instagram"></i> @pease_project</a>
-    <a href="contacts.html" class="btn btn-outline">Сообщить о схеме</a>
+    <a href="https://www.instagram.com/pease_project" target="_blank" rel="noopener" class="btn btn-accent" data-i18n="team_ig_btn"><i class="fa-brands fa-instagram"></i> @pease_project</a>
+    <a href="contacts.html" class="btn btn-outline" data-i18n="team_ig_btn2">Сообщить о схеме</a>
   </div>
 </section>
 
@@ -139,41 +144,42 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <a href="index.html" class="nav-logo" style="font-size:1.6rem;">P<span class="accent-letter">E</span>ASE</a>
-      <p>Образовательный проект о защите от мошенничества. Защити себя и близких.</p>
+      <p data-i18n="footer_tagline">Образовательный проект о защите от мошенничества. Защити себя и близких.</p>
       <a href="https://www.instagram.com/pease_project" target="_blank" rel="noopener" style="color:var(--accent-light); font-size:0.85rem; text-decoration:none;"><i class="fa-brands fa-instagram"></i> @pease_project</a>
     </div>
     <div class="footer-col">
-      <h4>Разделы</h4>
+      <h4 data-i18n="footer_sections">Разделы</h4>
       <ul>
-        <li><a href="schemes.html">Схемы мошенников</a></li>
-        <li><a href="quiz.html">Тест на знания</a></li>
-        <li><a href="guides.html">Гайды</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="schemes.html" data-i18n="footer_link_schemes">Схемы мошенников</a></li>
+        <li><a href="quiz.html" data-i18n="footer_link_quiz">Тест на знания</a></li>
+        <li><a href="guides.html" data-i18n="footer_link_guides">Гайды</a></li>
+        <li><a href="contacts.html" data-i18n="footer_link_contacts">Контакты</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Помощь</h4>
+      <h4 data-i18n="footer_help">Помощь</h4>
       <ul>
-        <li><a href="contacts.html">Что делать если обманули</a></li>
-        <li><a href="contacts.html">Куда звонить</a></li>
-        <li><a href="contacts.html">Сообщить о схеме</a></li>
+        <li><a href="contacts.html" data-i18n="footer_help1">Что делать если обманули</a></li>
+        <li><a href="contacts.html" data-i18n="footer_help2">Куда звонить</a></li>
+        <li><a href="contacts.html" data-i18n="footer_help3">Сообщить о схеме</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>О проекте</h4>
+      <h4 data-i18n="footer_about">О проекте</h4>
       <ul>
-        <li><a href="team.html">Команда PEASE</a></li>
-        <li><a href="sources.html">Источники</a></li>
-        <li><a href="privacy.html">Конфиденциальность</a></li>
+        <li><a href="team.html" data-i18n="footer_about_team">Команда PEASE</a></li>
+        <li><a href="sources.html" data-i18n="footer_about_sources">Источники</a></li>
+        <li><a href="privacy.html" data-i18n="footer_about_privacy">Конфиденциальность</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; 2026 PEASE. Все права защищены.</span>
-    <span>Защити себя и близких</span>
+    <span data-i18n="footer_copyright">&copy; 2026 PEASE. Все права защищены.</span>
+    <span data-i18n="footer_slogan">Защити себя и близких</span>
   </div>
 </footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

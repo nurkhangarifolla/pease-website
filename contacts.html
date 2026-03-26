@@ -7,19 +7,24 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
+<body data-i18n-title="contacts_title">
 
 <!-- NAV -->
 <nav class="nav">
   <a href="index.html" class="nav-logo">P<span class="accent-letter">E</span>ASE</a>
   <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Главная</a></li>
-    <li><a href="schemes.html">Схемы</a></li>
-    <li><a href="quiz.html">Тест</a></li>
-    <li><a href="guides.html">Гайды</a></li>
-    <li><a href="contacts.html" class="active">Контакты</a></li>
-    <li><a href="quiz.html" class="nav-cta">Пройти тест</a></li>
+    <li><a href="index.html" data-i18n="nav_home">Главная</a></li>
+    <li><a href="schemes.html" data-i18n="nav_schemes">Схемы</a></li>
+    <li><a href="quiz.html" data-i18n="nav_quiz">Тест</a></li>
+    <li><a href="guides.html" data-i18n="nav_guides">Гайды</a></li>
+    <li><a href="contacts.html" class="active" data-i18n="nav_contacts">Контакты</a></li>
+    <li><a href="quiz.html" class="nav-cta" data-i18n="nav_cta">Пройти тест</a></li>
   </ul>
+  <div class="lang-toggle" id="langToggle">
+    <span class="lang-option active" data-lang="ru">RU</span>
+    <span class="lang-sep">|</span>
+    <span class="lang-option" data-lang="en">EN</span>
+  </div>
   <button class="hamburger" id="hamburger" aria-label="Меню">
     <span></span><span></span><span></span>
   </button>
@@ -28,132 +33,132 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-badge">Экстренная помощь</div>
-    <h1>Вас обманули?<br><span class="accent">Действуйте сейчас.</span></h1>
-    <p>Пошаговый план действий, экстренные контакты и ответы на главные вопросы. Чем быстрее вы среагируете, тем больше шансов вернуть деньги.</p>
+    <div class="hero-badge" data-i18n="contacts_hero_badge">Экстренная помощь</div>
+    <h1 data-i18n="contacts_hero_h1">Вас обманули?<br><span class="accent">Действуйте сейчас.</span></h1>
+    <p data-i18n="contacts_hero_p">Пошаговый план действий, экстренные контакты и ответы на главные вопросы. Чем быстрее вы среагируете, тем больше шансов вернуть деньги.</p>
   </div>
   <div class="hero-decor"><i class="fa-solid fa-life-ring"></i></div>
 </section>
 
 <!-- EMERGENCY TIMELINE -->
 <section>
-  <div class="section-tag">Пошаговый план</div>
-  <h2 class="section-title">Вас только что обманули — делайте это по порядку</h2>
-  <p class="section-sub">Каждая минута на счету. Следуйте этим шагам в указанном порядке.</p>
+  <div class="section-tag" data-i18n="contacts_timeline_tag">Пошаговый план</div>
+  <h2 class="section-title" data-i18n="contacts_timeline_h2">Вас только что обманули — делайте это по порядку</h2>
+  <p class="section-sub" data-i18n="contacts_timeline_sub">Каждая минута на счету. Следуйте этим шагам в указанном порядке.</p>
 
   <div class="timeline">
     <div class="timeline-item fade-in" data-step="1">
-      <h4>Немедленно — Заблокируйте карту</h4>
-      <p>Позвоните в банк по номеру на обратной стороне карты или заблокируйте через мобильное приложение. Это остановит дальнейшие списания. Не звоните по номерам из подозрительных SMS.</p>
+      <h4 data-i18n="ct1_h4">Немедленно — Заблокируйте карту</h4>
+      <p data-i18n="ct1_p">Позвоните в банк по номеру на обратной стороне карты или заблокируйте через мобильное приложение. Это остановит дальнейшие списания. Не звоните по номерам из подозрительных SMS.</p>
     </div>
     <div class="timeline-item fade-in" data-step="2">
-      <h4>В течение 5 минут — Смените пароли</h4>
-      <p>Если вы вводили пароли или данные на подозрительном сайте — смените их. Начните с email, потом банковские приложения, затем соцсети. Включите двухфакторную аутентификацию.</p>
+      <h4 data-i18n="ct2_h4">В течение 5 минут — Смените пароли</h4>
+      <p data-i18n="ct2_p">Если вы вводили пароли или данные на подозрительном сайте — смените их. Начните с email, потом банковские приложения, затем соцсети. Включите двухфакторную аутентификацию.</p>
     </div>
     <div class="timeline-item fade-in" data-step="3">
-      <h4>В течение 15 минут — Зафиксируйте доказательства</h4>
-      <p>Сделайте скриншоты: переписка, SMS, email, сайт мошенника, история звонков. Запишите номера телефонов, адреса сайтов, суммы переводов. Не удаляйте ничего.</p>
+      <h4 data-i18n="ct3_h4">В течение 15 минут — Зафиксируйте доказательства</h4>
+      <p data-i18n="ct3_p">Сделайте скриншоты: переписка, SMS, email, сайт мошенника, история звонков. Запишите номера телефонов, адреса сайтов, суммы переводов. Не удаляйте ничего.</p>
     </div>
     <div class="timeline-item fade-in" data-step="4">
-      <h4>В течение часа — Заявление в банк</h4>
-      <p>Подайте заявление о спорной операции. По закону банк обязан рассмотреть его в течение 30 дней (60 дней для международных операций). Сохраните номер обращения.</p>
+      <h4 data-i18n="ct4_h4">В течение часа — Заявление в банк</h4>
+      <p data-i18n="ct4_p">Подайте заявление о спорной операции. По закону банк обязан рассмотреть его в течение 30 дней (60 дней для международных операций). Сохраните номер обращения.</p>
     </div>
     <div class="timeline-item fade-in" data-step="5">
-      <h4>В течение суток — Заявление в полицию</h4>
-      <p>Обратитесь в ближайший отдел полиции лично. Возьмите с собой все доказательства: скриншоты, выписки из банка. Получите талон-уведомление о принятии заявления.</p>
+      <h4 data-i18n="ct5_h4">В течение суток — Заявление в полицию</h4>
+      <p data-i18n="ct5_p">Обратитесь в ближайший отдел полиции лично. Возьмите с собой все доказательства: скриншоты, выписки из банка. Получите талон-уведомление о принятии заявления.</p>
     </div>
     <div class="timeline-item fade-in" data-step="6">
-      <h4>Дополнительно — Сообщите в АРРФР</h4>
-      <p>Подайте жалобу через интернет-приёмную АРРФР (finreg.kz). Это поможет зафиксировать мошенническую схему и защитить других людей от тех же мошенников.</p>
+      <h4 data-i18n="ct6_h4">Дополнительно — Сообщите в АРРФР</h4>
+      <p data-i18n="ct6_p">Подайте жалобу через интернет-приёмную АРРФР (finreg.kz). Это поможет зафиксировать мошенническую схему и защитить других людей от тех же мошенников.</p>
     </div>
   </div>
 </section>
 
 <!-- EMERGENCY CONTACTS -->
 <section style="background:var(--card-bg);">
-  <div class="section-tag">Экстренные контакты</div>
-  <h2 class="section-title">Куда звонить</h2>
-  <p class="section-sub">Сохраните эти номера в телефоне прямо сейчас.</p>
+  <div class="section-tag" data-i18n="contacts_emerg_tag">Экстренные контакты</div>
+  <h2 class="section-title" data-i18n="contacts_emerg_h2">Куда звонить</h2>
+  <p class="section-sub" data-i18n="contacts_emerg_sub">Сохраните эти номера в телефоне прямо сейчас.</p>
 
   <div class="contacts-grid">
     <div class="contact-card fade-in">
       <div class="contact-card-icon"><i class="fa-solid fa-building-columns"></i></div>
-      <h3>Ваш банк</h3>
-      <div class="phone">Номер на карте</div>
-      <p>Звоните по номеру на обратной стороне вашей карты. Работает круглосуточно. Попросите заблокировать карту и оформить заявление о мошенничестве.</p>
+      <h3 data-i18n="ce1_h3">Ваш банк</h3>
+      <div class="phone" data-i18n="ce1_phone">Номер на карте</div>
+      <p data-i18n="ce1_p">Звоните по номеру на обратной стороне вашей карты. Работает круглосуточно. Попросите заблокировать карту и оформить заявление о мошенничестве.</p>
     </div>
     <div class="contact-card fade-in">
       <div class="contact-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
-      <h3>Полиция</h3>
-      <div class="phone">102</div>
-      <p>Единый номер полиции. Подайте заявление о мошенничестве лично в ближайшем отделе. Возьмите с собой все доказательства.</p>
+      <h3 data-i18n="ce2_h3">Полиция</h3>
+      <div class="phone" data-i18n="ce2_phone">102</div>
+      <p data-i18n="ce2_p">Единый номер полиции. Подайте заявление о мошенничестве лично в ближайшем отделе. Возьмите с собой все доказательства.</p>
     </div>
     <div class="contact-card fade-in">
       <div class="contact-card-icon"><i class="fa-solid fa-landmark"></i></div>
-      <h3>АРРФР (финансовый регулятор)</h3>
-      <div class="phone">1459</div>
-      <p>Бесплатный номер для жалоб на финансовые организации. Также можно подать обращение через интернет-приёмную на finreg.kz.</p>
+      <h3 data-i18n="ce3_h3">АРРФР (финансовый регулятор)</h3>
+      <div class="phone" data-i18n="ce3_phone">1459</div>
+      <p data-i18n="ce3_p">Бесплатный номер для жалоб на финансовые организации. Также можно подать обращение через интернет-приёмную на finreg.kz.</p>
     </div>
     <div class="contact-card fade-in">
       <div class="contact-card-icon"><i class="fa-solid fa-globe"></i></div>
-      <h3>Министерство цифрового развития РК</h3>
-      <div class="phone">1414</div>
-      <p>Для блокировки мошеннических сайтов. Подайте жалобу через портал eOtinish (eotinish.gov.kz). Помогите заблокировать ресурс мошенников.</p>
+      <h3 data-i18n="ce4_h3">Министерство цифрового развития РК</h3>
+      <div class="phone" data-i18n="ce4_phone">1414</div>
+      <p data-i18n="ce4_p">Для блокировки мошеннических сайтов. Подайте жалобу через портал eOtinish (eotinish.gov.kz). Помогите заблокировать ресурс мошенников.</p>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
 <section>
-  <div class="section-tag">Частые вопросы</div>
-  <h2 class="section-title">FAQ после мошенничества</h2>
-  <p class="section-sub">Ответы на самые важные вопросы, которые возникают после столкновения с мошенниками.</p>
+  <div class="section-tag" data-i18n="contacts_faq_tag">Частые вопросы</div>
+  <h2 class="section-title" data-i18n="contacts_faq_h2">FAQ после мошенничества</h2>
+  <p class="section-sub" data-i18n="contacts_faq_sub">Ответы на самые важные вопросы, которые возникают после столкновения с мошенниками.</p>
 
   <div class="accordion-group" style="max-width:720px;">
     <div class="accordion-item fade-in">
-      <button class="accordion-btn">Можно ли вернуть деньги, переведённые мошенникам?</button>
+      <button class="accordion-btn" data-i18n="faq1_q">Можно ли вернуть деньги, переведённые мошенникам?</button>
       <div class="accordion-content">
-        <div class="accordion-content-inner">
+        <div class="accordion-content-inner" data-i18n="faq1_a">
           <p>Шансы есть, если действовать быстро. По закону банк обязан рассмотреть заявление о спорной операции. Если вы подали заявление в день операции и мошенник ещё не снял деньги — банк может заморозить средства. Статистически возвращают около 4-8% от украденных сумм, но при быстром обращении шансы значительно выше.</p>
         </div>
       </div>
     </div>
     <div class="accordion-item fade-in">
-      <button class="accordion-btn">Нужно ли идти в полицию, если сумма небольшая?</button>
+      <button class="accordion-btn" data-i18n="faq2_q">Нужно ли идти в полицию, если сумма небольшая?</button>
       <div class="accordion-content">
-        <div class="accordion-content-inner">
+        <div class="accordion-content-inner" data-i18n="faq2_a">
           <p>Да, обязательно. Даже если сумма небольшая, ваше заявление поможет: 1) зафиксировать мошенническую схему, 2) объединить его с другими заявлениями по тем же мошенникам, 3) привлечь преступников к ответственности. Полиция не имеет права отказать в принятии заявления независимо от суммы.</p>
         </div>
       </div>
     </div>
     <div class="accordion-item fade-in">
-      <button class="accordion-btn">Мне стыдно, что я попался. Что делать?</button>
+      <button class="accordion-btn" data-i18n="faq3_q">Мне стыдно, что я попался. Что делать?</button>
       <div class="accordion-content">
-        <div class="accordion-content-inner">
+        <div class="accordion-content-inner" data-i18n="faq3_a">
           <p>Мошенники — профессиональные психологи. Они используют страх, срочность и авторитет, чтобы отключить критическое мышление. Жертвами становятся образованные, успешные люди. Это не ваша вина — это преступление мошенников. Не стесняйтесь обращаться за помощью и расскажите о своём опыте, чтобы защитить других.</p>
         </div>
       </div>
     </div>
     <div class="accordion-item fade-in">
-      <button class="accordion-btn">Мошенники знают мои данные. Чем это грозит?</button>
+      <button class="accordion-btn" data-i18n="faq4_q">Мошенники знают мои данные. Чем это грозит?</button>
       <div class="accordion-content">
-        <div class="accordion-content-inner">
+        <div class="accordion-content-inner" data-i18n="faq4_a">
           <p>Если утекли ФИО + телефон — вам будут звонить с новыми схемами. Если утекли данные удостоверения личности — на вас могут оформить кредит. Что делать: 1) смените все пароли, 2) включите 2FA везде, 3) проверяйте свою кредитную историю через ПКБ (1cb.kz), 4) установите добровольный отказ от получения кредитов через eGov.kz.</p>
         </div>
       </div>
     </div>
     <div class="accordion-item fade-in">
-      <button class="accordion-btn">Как проверить, не оформлен ли на меня кредит?</button>
+      <button class="accordion-btn" data-i18n="faq5_q">Как проверить, не оформлен ли на меня кредит?</button>
       <div class="accordion-content">
-        <div class="accordion-content-inner">
+        <div class="accordion-content-inner" data-i18n="faq5_a">
           <p>Через Первое кредитное бюро (1cb.kz) вы можете бесплатно запросить кредитную историю. Также можно установить добровольный отказ от получения кредитов через eGov.kz — это бесплатно и защитит от оформления кредитов мошенниками.</p>
         </div>
       </div>
     </div>
     <div class="accordion-item fade-in">
-      <button class="accordion-btn">Могу ли я подать заявление в полицию онлайн?</button>
+      <button class="accordion-btn" data-i18n="faq6_q">Могу ли я подать заявление в полицию онлайн?</button>
       <div class="accordion-content">
-        <div class="accordion-content-inner">
+        <div class="accordion-content-inner" data-i18n="faq6_a">
           <p>Да, вы можете подать обращение через портал Qamqor (qamqor.gov.kz), но для возбуждения дела потребуется личный визит в отделение. Онлайн-обращение ускоряет процесс — к вашему приходу заявление уже будет зарегистрировано. Также можно позвонить по номеру 102 и получить консультацию.</p>
         </div>
       </div>
@@ -163,35 +168,35 @@
 
 <!-- REPORT FORM -->
 <section style="background:var(--card-bg);">
-  <div class="section-tag">Помогите другим</div>
-  <h2 class="section-title">Сообщить о мошеннической схеме</h2>
-  <p class="section-sub">Расскажите нам о новой схеме мошенничества, чтобы мы предупредили других. Ваша информация поможет защитить людей.</p>
+  <div class="section-tag" data-i18n="contacts_report_tag">Помогите другим</div>
+  <h2 class="section-title" data-i18n="contacts_report_h2">Сообщить о мошеннической схеме</h2>
+  <p class="section-sub" data-i18n="contacts_report_sub">Расскажите нам о новой схеме мошенничества, чтобы мы предупредили других. Ваша информация поможет защитить людей.</p>
 
   <form class="report-form" id="reportForm">
     <div class="form-row">
       <div>
-        <label for="reportName">Ваше имя</label>
-        <input type="text" id="reportName" name="name" placeholder="Иван Иванов" required>
+        <label for="reportName" data-i18n="form_name">Ваше имя</label>
+        <input type="text" id="reportName" name="name" placeholder="Иван Иванов" data-i18n-placeholder="form_name_ph" required>
       </div>
       <div>
-        <label for="reportEmail">Email</label>
-        <input type="email" id="reportEmail" name="email" placeholder="ivan@example.com" required>
+        <label for="reportEmail" data-i18n="form_email">Email</label>
+        <input type="email" id="reportEmail" name="email" placeholder="ivan@example.com" data-i18n-placeholder="form_email_ph" required>
       </div>
     </div>
-    <label for="reportType">Тип мошенничества</label>
+    <label for="reportType" data-i18n="form_type">Тип мошенничества</label>
     <select id="reportType" name="type" required>
-      <option value="" disabled selected>Выберите тип</option>
-      <option value="phone">Телефонное мошенничество</option>
-      <option value="online">Онлайн-мошенничество</option>
-      <option value="financial">Финансовое мошенничество</option>
-      <option value="social">Социальная инженерия</option>
-      <option value="other">Другое</option>
+      <option value="" disabled selected data-i18n="form_type_default">Выберите тип</option>
+      <option value="phone" data-i18n="form_type_phone">Телефонное мошенничество</option>
+      <option value="online" data-i18n="form_type_online">Онлайн-мошенничество</option>
+      <option value="financial" data-i18n="form_type_financial">Финансовое мошенничество</option>
+      <option value="social" data-i18n="form_type_social">Социальная инженерия</option>
+      <option value="other" data-i18n="form_type_other">Другое</option>
     </select>
-    <label for="reportDesc">Опишите схему</label>
-    <textarea id="reportDesc" name="description" placeholder="Подробно опишите, как действовали мошенники: что говорили, какие ссылки отправляли, какие данные запрашивали..." required></textarea>
-    <label for="reportEvidence">Ссылки или номера телефонов мошенников</label>
-    <input type="text" id="reportEvidence" name="evidence" placeholder="Номер телефона, URL сайта, email мошенника...">
-    <button type="submit" class="btn btn-accent" style="align-self:flex-start;">Отправить сообщение</button>
+    <label for="reportDesc" data-i18n="form_desc">Опишите схему</label>
+    <textarea id="reportDesc" name="description" placeholder="Подробно опишите, как действовали мошенники: что говорили, какие ссылки отправляли, какие данные запрашивали..." data-i18n-placeholder="form_desc_ph" required></textarea>
+    <label for="reportEvidence" data-i18n="form_evidence">Ссылки или номера телефонов мошенников</label>
+    <input type="text" id="reportEvidence" name="evidence" placeholder="Номер телефона, URL сайта, email мошенника..." data-i18n-placeholder="form_evidence_ph">
+    <button type="submit" class="btn btn-accent" style="align-self:flex-start;" data-i18n="form_submit">Отправить сообщение</button>
   </form>
 </section>
 
@@ -200,38 +205,38 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <a href="index.html" class="nav-logo" style="font-size:1.6rem;">P<span class="accent-letter">E</span>ASE</a>
-      <p>Образовательный проект о защите от мошенничества. Защити себя и близких.</p>
+      <p data-i18n="footer_tagline">Образовательный проект о защите от мошенничества. Защити себя и близких.</p>
       <a href="https://www.instagram.com/pease_project" target="_blank" rel="noopener" style="color:var(--accent-light); font-size:0.85rem; text-decoration:none;"><i class="fa-brands fa-instagram"></i> @pease_project</a>
     </div>
     <div class="footer-col">
-      <h4>Разделы</h4>
+      <h4 data-i18n="footer_sections">Разделы</h4>
       <ul>
-        <li><a href="schemes.html">Схемы мошенников</a></li>
-        <li><a href="quiz.html">Тест на знания</a></li>
-        <li><a href="guides.html">Гайды</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="schemes.html" data-i18n="footer_link_schemes">Схемы мошенников</a></li>
+        <li><a href="quiz.html" data-i18n="footer_link_quiz">Тест на знания</a></li>
+        <li><a href="guides.html" data-i18n="footer_link_guides">Гайды</a></li>
+        <li><a href="contacts.html" data-i18n="footer_link_contacts">Контакты</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Помощь</h4>
+      <h4 data-i18n="footer_help">Помощь</h4>
       <ul>
-        <li><a href="contacts.html">Что делать если обманули</a></li>
-        <li><a href="contacts.html">Куда звонить</a></li>
-        <li><a href="contacts.html">Сообщить о схеме</a></li>
+        <li><a href="contacts.html" data-i18n="footer_help1">Что делать если обманули</a></li>
+        <li><a href="contacts.html" data-i18n="footer_help2">Куда звонить</a></li>
+        <li><a href="contacts.html" data-i18n="footer_help3">Сообщить о схеме</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>О проекте</h4>
+      <h4 data-i18n="footer_about">О проекте</h4>
       <ul>
-        <li><a href="team.html">Команда PEASE</a></li>
-        <li><a href="sources.html">Источники</a></li>
-        <li><a href="privacy.html">Конфиденциальность</a></li>
+        <li><a href="team.html" data-i18n="footer_about_team">Команда PEASE</a></li>
+        <li><a href="sources.html" data-i18n="footer_about_sources">Источники</a></li>
+        <li><a href="privacy.html" data-i18n="footer_about_privacy">Конфиденциальность</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; 2026 PEASE. Все права защищены.</span>
-    <span>Защити себя и близких</span>
+    <span data-i18n="footer_copyright">&copy; 2026 PEASE. Все права защищены.</span>
+    <span data-i18n="footer_slogan">Защити себя и близких</span>
   </div>
 </footer>
 
@@ -239,6 +244,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>emailjs.init('OMrw3CEEu5w_ZalI1');</script>
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

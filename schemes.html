@@ -7,19 +7,24 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
+<body data-i18n-title="schemes_title">
 
 <!-- NAV -->
 <nav class="nav">
   <a href="index.html" class="nav-logo">P<span class="accent-letter">E</span>ASE</a>
   <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Главная</a></li>
-    <li><a href="schemes.html" class="active">Схемы</a></li>
-    <li><a href="quiz.html">Тест</a></li>
-    <li><a href="guides.html">Гайды</a></li>
-    <li><a href="contacts.html">Контакты</a></li>
-    <li><a href="quiz.html" class="nav-cta">Пройти тест</a></li>
+    <li><a href="index.html" data-i18n="nav_home">Главная</a></li>
+    <li><a href="schemes.html" class="active" data-i18n="nav_schemes">Схемы</a></li>
+    <li><a href="quiz.html" data-i18n="nav_quiz">Тест</a></li>
+    <li><a href="guides.html" data-i18n="nav_guides">Гайды</a></li>
+    <li><a href="contacts.html" data-i18n="nav_contacts">Контакты</a></li>
+    <li><a href="quiz.html" class="nav-cta" data-i18n="nav_cta">Пройти тест</a></li>
   </ul>
+  <div class="lang-toggle" id="langToggle">
+    <span class="lang-option active" data-lang="ru">RU</span>
+    <span class="lang-sep">|</span>
+    <span class="lang-option" data-lang="en">EN</span>
+  </div>
   <button class="hamburger" id="hamburger" aria-label="Меню">
     <span></span><span></span><span></span>
   </button>
@@ -28,26 +33,26 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-badge">Каталог мошеннических схем</div>
-    <h1>Знай врага<br><span class="accent">в лицо.</span></h1>
-    <p>12 самых распространённых схем обмана. Узнайте, как они работают, по каким признакам их распознать и что делать, если вы столкнулись с мошенниками.</p>
+    <div class="hero-badge" data-i18n="schemes_hero_badge">Каталог мошеннических схем</div>
+    <h1 data-i18n="schemes_hero_h1">Знай врага<br><span class="accent">в лицо.</span></h1>
+    <p data-i18n="schemes_hero_p">12 самых распространённых схем обмана. Узнайте, как они работают, по каким признакам их распознать и что делать, если вы столкнулись с мошенниками.</p>
   </div>
   <div class="hero-decor"><i class="fa-solid fa-user-secret"></i></div>
 </section>
 
 <!-- SCHEMES CATALOG -->
 <section>
-  <div class="section-tag">Все схемы</div>
-  <h2 class="section-title">Каталог мошеннических схем</h2>
-  <p class="section-sub">Фильтруйте по категории, чтобы быстро найти нужную информацию.</p>
+  <div class="section-tag" data-i18n="schemes_tag">Все схемы</div>
+  <h2 class="section-title" data-i18n="schemes_h2">Каталог мошеннических схем</h2>
+  <p class="section-sub" data-i18n="schemes_sub">Фильтруйте по категории, чтобы быстро найти нужную информацию.</p>
 
   <!-- Filter Bar -->
   <div class="filter-bar">
-    <button class="filter-btn active" data-filter="all">Все</button>
-    <button class="filter-btn" data-filter="phone"><i class="fa-solid fa-mobile-screen-button"></i> Телефонные</button>
-    <button class="filter-btn" data-filter="online"><i class="fa-solid fa-laptop"></i> Онлайн</button>
-    <button class="filter-btn" data-filter="financial"><i class="fa-solid fa-coins"></i> Финансовые</button>
-    <button class="filter-btn" data-filter="social"><i class="fa-solid fa-users"></i> Социальные</button>
+    <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Все</button>
+    <button class="filter-btn" data-filter="phone" data-i18n="filter_phone"><i class="fa-solid fa-mobile-screen-button"></i> Телефонные</button>
+    <button class="filter-btn" data-filter="online" data-i18n="filter_online"><i class="fa-solid fa-laptop"></i> Онлайн</button>
+    <button class="filter-btn" data-filter="financial" data-i18n="filter_financial"><i class="fa-solid fa-coins"></i> Финансовые</button>
+    <button class="filter-btn" data-filter="social" data-i18n="filter_social"><i class="fa-solid fa-users"></i> Социальные</button>
   </div>
 
   <!-- Schemes Grid -->
@@ -58,14 +63,14 @@
       <div class="scheme-card-header">
         <div class="scheme-icon"><i class="fa-solid fa-fish"></i></div>
         <div class="info">
-          <h3>Фишинг</h3>
-          <span class="badge badge-high">Высокая опасность</span>
+          <h3 data-i18n="s1_h3">Фишинг</h3>
+          <span class="badge badge-high" data-i18n="badge_high">Высокая опасность</span>
         </div>
       </div>
       <div class="scheme-card-body">
-        <p>Поддельные сайты и письма, копирующие банки, eGov и популярные сервисы для кражи логинов и данных карт.</p>
+        <p data-i18n="s1_p">Поддельные сайты и письма, копирующие банки, eGov и популярные сервисы для кражи логинов и данных карт.</p>
         <div class="scheme-details">
-          <button class="scheme-detail-btn">Как это работает</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_how">Как это работает</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ol>
@@ -76,7 +81,7 @@
               </ol>
             </div>
           </div>
-          <button class="scheme-detail-btn">Красные флаги</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_flags">Красные флаги</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ul>
@@ -87,7 +92,7 @@
               </ul>
             </div>
           </div>
-          <button class="scheme-detail-btn">Что делать</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_what">Что делать</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ol>
@@ -107,14 +112,14 @@
       <div class="scheme-card-header">
         <div class="scheme-icon"><i class="fa-solid fa-phone"></i></div>
         <div class="info">
-          <h3>Звонки от «банка»</h3>
-          <span class="badge badge-high">Высокая опасность</span>
+          <h3 data-i18n="s2_h3">Звонки от «банка»</h3>
+          <span class="badge badge-high" data-i18n="badge_high">Высокая опасность</span>
         </div>
       </div>
       <div class="scheme-card-body">
-        <p>Мошенники звонят, представляясь сотрудниками банка или Нацбанка РК, и убеждают перевести деньги на «безопасный счёт».</p>
+        <p data-i18n="s2_p">Мошенники звонят, представляясь сотрудниками банка или Нацбанка РК, и убеждают перевести деньги на «безопасный счёт».</p>
         <div class="scheme-details">
-          <button class="scheme-detail-btn">Как это работает</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_how">Как это работает</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ol>
@@ -125,7 +130,7 @@
               </ol>
             </div>
           </div>
-          <button class="scheme-detail-btn">Красные флаги</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_flags">Красные флаги</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ul>
@@ -136,7 +141,7 @@
               </ul>
             </div>
           </div>
-          <button class="scheme-detail-btn">Что делать</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_what">Что делать</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ol>
@@ -156,14 +161,14 @@
       <div class="scheme-card-header">
         <div class="scheme-icon"><i class="fa-solid fa-cart-shopping"></i></div>
         <div class="info">
-          <h3>Фейковые магазины</h3>
-          <span class="badge badge-high">Высокая опасность</span>
+          <h3 data-i18n="s3_h3">Фейковые магазины</h3>
+          <span class="badge badge-high" data-i18n="badge_high">Высокая опасность</span>
         </div>
       </div>
       <div class="scheme-card-body">
-        <p>Поддельные интернет-магазины с невероятными ценами. Товар не приходит, деньги не возвращают.</p>
+        <p data-i18n="s3_p">Поддельные интернет-магазины с невероятными ценами. Товар не приходит, деньги не возвращают.</p>
         <div class="scheme-details">
-          <button class="scheme-detail-btn">Как это работает</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_how">Как это работает</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ol>
@@ -174,7 +179,7 @@
               </ol>
             </div>
           </div>
-          <button class="scheme-detail-btn">Красные флаги</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_flags">Красные флаги</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ul>
@@ -185,7 +190,7 @@
               </ul>
             </div>
           </div>
-          <button class="scheme-detail-btn">Что делать</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_what">Что делать</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ol>
@@ -205,14 +210,14 @@
       <div class="scheme-card-header">
         <div class="scheme-icon"><i class="fa-solid fa-heart-crack"></i></div>
         <div class="info">
-          <h3>Романтические аферы</h3>
-          <span class="badge badge-medium">Средняя опасность</span>
+          <h3 data-i18n="s4_h3">Романтические аферы</h3>
+          <span class="badge badge-medium" data-i18n="badge_medium">Средняя опасность</span>
         </div>
       </div>
       <div class="scheme-card-body">
-        <p>Мошенники заводят романтические отношения онлайн, чтобы затем выманить деньги под различными предлогами.</p>
+        <p data-i18n="s4_p">Мошенники заводят романтические отношения онлайн, чтобы затем выманить деньги под различными предлогами.</p>
         <div class="scheme-details">
-          <button class="scheme-detail-btn">Как это работает</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_how">Как это работает</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ol>
@@ -223,7 +228,7 @@
               </ol>
             </div>
           </div>
-          <button class="scheme-detail-btn">Красные флаги</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_flags">Красные флаги</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ul>
@@ -234,7 +239,7 @@
               </ul>
             </div>
           </div>
-          <button class="scheme-detail-btn">Что делать</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_what">Что делать</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ol>
@@ -254,14 +259,14 @@
       <div class="scheme-card-header">
         <div class="scheme-icon"><i class="fa-brands fa-bitcoin"></i></div>
         <div class="info">
-          <h3>Крипто-мошенничество</h3>
-          <span class="badge badge-high">Высокая опасность</span>
+          <h3 data-i18n="s5_h3">Крипто-мошенничество</h3>
+          <span class="badge badge-high" data-i18n="badge_high">Высокая опасность</span>
         </div>
       </div>
       <div class="scheme-card-body">
-        <p>Фейковые криптобиржи, «инвестиционные платформы» и «сигнальные группы» в Telegram с обещанием быстрого обогащения.</p>
+        <p data-i18n="s5_p">Фейковые криптобиржи, «инвестиционные платформы» и «сигнальные группы» в Telegram с обещанием быстрого обогащения.</p>
         <div class="scheme-details">
-          <button class="scheme-detail-btn">Как это работает</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_how">Как это работает</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ol>
@@ -272,7 +277,7 @@
               </ol>
             </div>
           </div>
-          <button class="scheme-detail-btn">Красные флаги</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_flags">Красные флаги</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ul>
@@ -283,7 +288,7 @@
               </ul>
             </div>
           </div>
-          <button class="scheme-detail-btn">Что делать</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_what">Что делать</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ol>
@@ -303,14 +308,14 @@
       <div class="scheme-card-header">
         <div class="scheme-icon"><i class="fa-solid fa-briefcase"></i></div>
         <div class="info">
-          <h3>Фейковые вакансии</h3>
-          <span class="badge badge-medium">Средняя опасность</span>
+          <h3 data-i18n="s6_h3">Фейковые вакансии</h3>
+          <span class="badge badge-medium" data-i18n="badge_medium">Средняя опасность</span>
         </div>
       </div>
       <div class="scheme-card-body">
-        <p>Несуществующие вакансии с высокой зарплатой, которые используют для кражи персональных данных или денег.</p>
+        <p data-i18n="s6_p">Несуществующие вакансии с высокой зарплатой, которые используют для кражи персональных данных или денег.</p>
         <div class="scheme-details">
-          <button class="scheme-detail-btn">Как это работает</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_how">Как это работает</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ol>
@@ -321,7 +326,7 @@
               </ol>
             </div>
           </div>
-          <button class="scheme-detail-btn">Красные флаги</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_flags">Красные флаги</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ul>
@@ -332,7 +337,7 @@
               </ul>
             </div>
           </div>
-          <button class="scheme-detail-btn">Что делать</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_what">Что делать</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ol>
@@ -352,14 +357,14 @@
       <div class="scheme-card-header">
         <div class="scheme-icon"><i class="fa-solid fa-dice"></i></div>
         <div class="info">
-          <h3>Фейковые лотереи и розыгрыши</h3>
-          <span class="badge badge-medium">Средняя опасность</span>
+          <h3 data-i18n="s7_h3">Фейковые лотереи и розыгрыши</h3>
+          <span class="badge badge-medium" data-i18n="badge_medium">Средняя опасность</span>
         </div>
       </div>
       <div class="scheme-card-body">
-        <p>«Вы выиграли приз!» — знакомое сообщение? Чтобы «получить» выигрыш, нужно заплатить «налог» или «комиссию».</p>
+        <p data-i18n="s7_p">«Вы выиграли приз!» — знакомое сообщение? Чтобы «получить» выигрыш, нужно заплатить «налог» или «комиссию».</p>
         <div class="scheme-details">
-          <button class="scheme-detail-btn">Как это работает</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_how">Как это работает</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ol>
@@ -370,7 +375,7 @@
               </ol>
             </div>
           </div>
-          <button class="scheme-detail-btn">Красные флаги</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_flags">Красные флаги</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ul>
@@ -381,7 +386,7 @@
               </ul>
             </div>
           </div>
-          <button class="scheme-detail-btn">Что делать</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_what">Что делать</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ol>
@@ -401,14 +406,14 @@
       <div class="scheme-card-header">
         <div class="scheme-icon"><i class="fa-solid fa-chart-line"></i></div>
         <div class="info">
-          <h3>Инвестиционные пирамиды</h3>
-          <span class="badge badge-high">Высокая опасность</span>
+          <h3 data-i18n="s8_h3">Инвестиционные пирамиды</h3>
+          <span class="badge badge-high" data-i18n="badge_high">Высокая опасность</span>
         </div>
       </div>
       <div class="scheme-card-body">
-        <p>Схема Понци: первые вкладчики получают деньги за счёт новых. Когда поток новых участников иссякает — все теряют.</p>
+        <p data-i18n="s8_p">Схема Понци: первые вкладчики получают деньги за счёт новых. Когда поток новых участников иссякает — все теряют.</p>
         <div class="scheme-details">
-          <button class="scheme-detail-btn">Как это работает</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_how">Как это работает</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ol>
@@ -419,7 +424,7 @@
               </ol>
             </div>
           </div>
-          <button class="scheme-detail-btn">Красные флаги</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_flags">Красные флаги</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ul>
@@ -430,7 +435,7 @@
               </ul>
             </div>
           </div>
-          <button class="scheme-detail-btn">Что делать</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_what">Что делать</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ol>
@@ -450,14 +455,14 @@
       <div class="scheme-card-header">
         <div class="scheme-icon"><i class="fa-solid fa-wrench"></i></div>
         <div class="info">
-          <h3>Фейковая техподдержка</h3>
-          <span class="badge badge-medium">Средняя опасность</span>
+          <h3 data-i18n="s9_h3">Фейковая техподдержка</h3>
+          <span class="badge badge-medium" data-i18n="badge_medium">Средняя опасность</span>
         </div>
       </div>
       <div class="scheme-card-body">
-        <p>Звонки или всплывающие окна с предупреждением о «вирусе» на компьютере и предложением платной «помощи».</p>
+        <p data-i18n="s9_p">Звонки или всплывающие окна с предупреждением о «вирусе» на компьютере и предложением платной «помощи».</p>
         <div class="scheme-details">
-          <button class="scheme-detail-btn">Как это работает</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_how">Как это работает</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ol>
@@ -468,7 +473,7 @@
               </ol>
             </div>
           </div>
-          <button class="scheme-detail-btn">Красные флаги</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_flags">Красные флаги</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ul>
@@ -479,7 +484,7 @@
               </ul>
             </div>
           </div>
-          <button class="scheme-detail-btn">Что делать</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_what">Что делать</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ol>
@@ -499,14 +504,14 @@
       <div class="scheme-card-header">
         <div class="scheme-icon"><i class="fa-solid fa-qrcode"></i></div>
         <div class="info">
-          <h3>QR-код мошенничество</h3>
-          <span class="badge badge-medium">Средняя опасность</span>
+          <h3 data-i18n="s10_h3">QR-код мошенничество</h3>
+          <span class="badge badge-medium" data-i18n="badge_medium">Средняя опасность</span>
         </div>
       </div>
       <div class="scheme-card-body">
-        <p>Поддельные QR-коды на объявлениях, чеках и товарах, ведущие на фишинговые сайты.</p>
+        <p data-i18n="s10_p">Поддельные QR-коды на объявлениях, чеках и товарах, ведущие на фишинговые сайты.</p>
         <div class="scheme-details">
-          <button class="scheme-detail-btn">Как это работает</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_how">Как это работает</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ol>
@@ -517,7 +522,7 @@
               </ol>
             </div>
           </div>
-          <button class="scheme-detail-btn">Красные флаги</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_flags">Красные флаги</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ul>
@@ -528,7 +533,7 @@
               </ul>
             </div>
           </div>
-          <button class="scheme-detail-btn">Что делать</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_what">Что делать</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ol>
@@ -548,14 +553,14 @@
       <div class="scheme-card-header">
         <div class="scheme-icon"><i class="fa-solid fa-user-lock"></i></div>
         <div class="info">
-          <h3>Взлом соцсетей</h3>
-          <span class="badge badge-high">Высокая опасность</span>
+          <h3 data-i18n="s11_h3">Взлом соцсетей</h3>
+          <span class="badge badge-high" data-i18n="badge_high">Высокая опасность</span>
         </div>
       </div>
       <div class="scheme-card-body">
-        <p>Взлом аккаунтов в Instagram, Telegram, WhatsApp для рассылки просьб о деньгах друзьям жертвы.</p>
+        <p data-i18n="s11_p">Взлом аккаунтов в Instagram, Telegram, WhatsApp для рассылки просьб о деньгах друзьям жертвы.</p>
         <div class="scheme-details">
-          <button class="scheme-detail-btn">Как это работает</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_how">Как это работает</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ol>
@@ -566,7 +571,7 @@
               </ol>
             </div>
           </div>
-          <button class="scheme-detail-btn">Красные флаги</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_flags">Красные флаги</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ul>
@@ -577,7 +582,7 @@
               </ul>
             </div>
           </div>
-          <button class="scheme-detail-btn">Что делать</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_what">Что делать</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ol>
@@ -597,14 +602,14 @@
       <div class="scheme-card-header">
         <div class="scheme-icon"><i class="fa-solid fa-ribbon"></i></div>
         <div class="info">
-          <h3>Фейковые благотворительные сборы</h3>
-          <span class="badge badge-medium">Средняя опасность</span>
+          <h3 data-i18n="s12_h3">Фейковые благотворительные сборы</h3>
+          <span class="badge badge-medium" data-i18n="badge_medium">Средняя опасность</span>
         </div>
       </div>
       <div class="scheme-card-body">
-        <p>Ложные сборы на «лечение ребёнка» или «помощь пострадавшим» — деньги идут мошенникам.</p>
+        <p data-i18n="s12_p">Ложные сборы на «лечение ребёнка» или «помощь пострадавшим» — деньги идут мошенникам.</p>
         <div class="scheme-details">
-          <button class="scheme-detail-btn">Как это работает</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_how">Как это работает</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ol>
@@ -615,7 +620,7 @@
               </ol>
             </div>
           </div>
-          <button class="scheme-detail-btn">Красные флаги</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_flags">Красные флаги</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ul>
@@ -626,7 +631,7 @@
               </ul>
             </div>
           </div>
-          <button class="scheme-detail-btn">Что делать</button>
+          <button class="scheme-detail-btn" data-i18n="scheme_what">Что делать</button>
           <div class="scheme-detail-content">
             <div class="scheme-detail-inner">
               <ol>
@@ -649,41 +654,42 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <a href="index.html" class="nav-logo" style="font-size:1.6rem;">P<span class="accent-letter">E</span>ASE</a>
-      <p>Образовательный проект о защите от мошенничества. Защити себя и близких.</p>
+      <p data-i18n="footer_tagline">Образовательный проект о защите от мошенничества. Защити себя и близких.</p>
       <a href="https://www.instagram.com/pease_project" target="_blank" rel="noopener" style="color:var(--accent-light); font-size:0.85rem; text-decoration:none;"><i class="fa-brands fa-instagram"></i> @pease_project</a>
     </div>
     <div class="footer-col">
-      <h4>Разделы</h4>
+      <h4 data-i18n="footer_sections">Разделы</h4>
       <ul>
-        <li><a href="schemes.html">Схемы мошенников</a></li>
-        <li><a href="quiz.html">Тест на знания</a></li>
-        <li><a href="guides.html">Гайды</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="schemes.html" data-i18n="footer_link_schemes">Схемы мошенников</a></li>
+        <li><a href="quiz.html" data-i18n="footer_link_quiz">Тест на знания</a></li>
+        <li><a href="guides.html" data-i18n="footer_link_guides">Гайды</a></li>
+        <li><a href="contacts.html" data-i18n="footer_link_contacts">Контакты</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Помощь</h4>
+      <h4 data-i18n="footer_help">Помощь</h4>
       <ul>
-        <li><a href="contacts.html">Что делать если обманули</a></li>
-        <li><a href="contacts.html">Куда звонить</a></li>
-        <li><a href="contacts.html">Сообщить о схеме</a></li>
+        <li><a href="contacts.html" data-i18n="footer_help1">Что делать если обманули</a></li>
+        <li><a href="contacts.html" data-i18n="footer_help2">Куда звонить</a></li>
+        <li><a href="contacts.html" data-i18n="footer_help3">Сообщить о схеме</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>О проекте</h4>
+      <h4 data-i18n="footer_about">О проекте</h4>
       <ul>
-        <li><a href="team.html">Команда PEASE</a></li>
-        <li><a href="sources.html">Источники</a></li>
-        <li><a href="privacy.html">Конфиденциальность</a></li>
+        <li><a href="team.html" data-i18n="footer_about_team">Команда PEASE</a></li>
+        <li><a href="sources.html" data-i18n="footer_about_sources">Источники</a></li>
+        <li><a href="privacy.html" data-i18n="footer_about_privacy">Конфиденциальность</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; 2026 PEASE. Все права защищены.</span>
-    <span>Защити себя и близких</span>
+    <span data-i18n="footer_copyright">&copy; 2026 PEASE. Все права защищены.</span>
+    <span data-i18n="footer_slogan">Защити себя и близких</span>
   </div>
 </footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

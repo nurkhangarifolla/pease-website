@@ -7,19 +7,24 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
+<body data-i18n-title="sources_title">
 
 <!-- NAV -->
 <nav class="nav">
   <a href="index.html" class="nav-logo">P<span class="accent-letter">E</span>ASE</a>
   <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Главная</a></li>
-    <li><a href="schemes.html">Схемы</a></li>
-    <li><a href="quiz.html">Тест</a></li>
-    <li><a href="guides.html">Гайды</a></li>
-    <li><a href="contacts.html">Контакты</a></li>
-    <li><a href="quiz.html" class="nav-cta">Пройти тест</a></li>
+    <li><a href="index.html" data-i18n="nav_home">Главная</a></li>
+    <li><a href="schemes.html" data-i18n="nav_schemes">Схемы</a></li>
+    <li><a href="quiz.html" data-i18n="nav_quiz">Тест</a></li>
+    <li><a href="guides.html" data-i18n="nav_guides">Гайды</a></li>
+    <li><a href="contacts.html" data-i18n="nav_contacts">Контакты</a></li>
+    <li><a href="quiz.html" class="nav-cta" data-i18n="nav_cta">Пройти тест</a></li>
   </ul>
+  <div class="lang-toggle" id="langToggle">
+    <span class="lang-option active" data-lang="ru">RU</span>
+    <span class="lang-sep">|</span>
+    <span class="lang-option" data-lang="en">EN</span>
+  </div>
   <button class="hamburger" id="hamburger" aria-label="Меню">
     <span></span><span></span><span></span>
   </button>
@@ -28,37 +33,37 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-badge">Прозрачность</div>
-    <h1>Наши<br><span class="accent">источники</span></h1>
-    <p>Вся информация на сайте PEASE основана на официальных данных государственных органов, финансовых регуляторов и проверенных исследований. Ниже — полный список источников.</p>
+    <div class="hero-badge" data-i18n="sources_hero_badge">Прозрачность</div>
+    <h1 data-i18n="sources_hero_h1">Наши<br><span class="accent">источники</span></h1>
+    <p data-i18n="sources_hero_p">Вся информация на сайте PEASE основана на официальных данных государственных органов, финансовых регуляторов и проверенных исследований. Ниже — полный список источников.</p>
   </div>
 </section>
 
 <!-- GOVERNMENT SOURCES -->
 <section>
-  <div class="section-tag">Государственные органы</div>
-  <h2 class="section-title">Официальные источники</h2>
-  <p class="section-sub">Данные государственных органов Республики Казахстан.</p>
+  <div class="section-tag" data-i18n="sources_gov_tag">Государственные органы</div>
+  <h2 class="section-title" data-i18n="sources_gov_h2">Официальные источники</h2>
+  <p class="section-sub" data-i18n="sources_gov_sub">Данные государственных органов Республики Казахстан.</p>
 
   <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px,1fr)); gap:24px;">
     <div class="card fade-in" style="padding:32px 24px;">
-      <h3 style="font-size:1.1rem; margin-bottom:10px;"><i class="fa-solid fa-landmark" style="color:var(--accent-light);"></i> АРРФР</h3>
-      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;">Агентство Республики Казахстан по регулированию и развитию финансового рынка — основной финансовый регулятор страны.</p>
+      <h3 style="font-size:1.1rem; margin-bottom:10px;"><i class="fa-solid fa-landmark" style="color:var(--accent-light);"></i> <span data-i18n="src_arrfr">АРРФР</span></h3>
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;" data-i18n="src_arrfr_p">Агентство Республики Казахстан по регулированию и развитию финансового рынка — основной финансовый регулятор страны.</p>
       <p style="font-size:0.82rem; color:var(--accent-light);">finreg.kz</p>
     </div>
     <div class="card fade-in" style="padding:32px 24px;">
-      <h3 style="font-size:1.1rem; margin-bottom:10px;"><i class="fa-solid fa-shield-halved" style="color:var(--accent-light);"></i> МВД Республики Казахстан</h3>
-      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;">Министерство внутренних дел — статистика по киберпреступлениям и мошенничеству, данные о раскрытых схемах.</p>
+      <h3 style="font-size:1.1rem; margin-bottom:10px;"><i class="fa-solid fa-shield-halved" style="color:var(--accent-light);"></i> <span data-i18n="src_mvd">МВД Республики Казахстан</span></h3>
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;" data-i18n="src_mvd_p">Министерство внутренних дел — статистика по киберпреступлениям и мошенничеству, данные о раскрытых схемах.</p>
       <p style="font-size:0.82rem; color:var(--accent-light);">qamqor.gov.kz</p>
     </div>
     <div class="card fade-in" style="padding:32px 24px;">
-      <h3 style="font-size:1.1rem; margin-bottom:10px;"><i class="fa-solid fa-laptop" style="color:var(--accent-light);"></i> Министерство цифрового развития РК</h3>
-      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;">Данные о блокировке мошеннических сайтов и мерах по защите граждан в цифровом пространстве.</p>
+      <h3 style="font-size:1.1rem; margin-bottom:10px;"><i class="fa-solid fa-laptop" style="color:var(--accent-light);"></i> <span data-i18n="src_mcr">Министерство цифрового развития РК</span></h3>
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;" data-i18n="src_mcr_p">Данные о блокировке мошеннических сайтов и мерах по защите граждан в цифровом пространстве.</p>
       <p style="font-size:0.82rem; color:var(--accent-light);">gov.kz</p>
     </div>
     <div class="card fade-in" style="padding:32px 24px;">
-      <h3 style="font-size:1.1rem; margin-bottom:10px;"><i class="fa-solid fa-clipboard" style="color:var(--accent-light);"></i> Комитет государственных доходов</h3>
-      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;">Информация о налоговых мошенничествах и фишинговых схемах, маскирующихся под КГД.</p>
+      <h3 style="font-size:1.1rem; margin-bottom:10px;"><i class="fa-solid fa-clipboard" style="color:var(--accent-light);"></i> <span data-i18n="src_kgd">Комитет государственных доходов</span></h3>
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;" data-i18n="src_kgd_p">Информация о налоговых мошенничествах и фишинговых схемах, маскирующихся под КГД.</p>
       <p style="font-size:0.82rem; color:var(--accent-light);">kgd.gov.kz</p>
     </div>
   </div>
@@ -66,29 +71,29 @@
 
 <!-- FINANCIAL SOURCES -->
 <section style="background:var(--card-bg);">
-  <div class="section-tag">Финансовые организации</div>
-  <h2 class="section-title">Банки и финансовые сервисы</h2>
-  <p class="section-sub">Рекомендации и данные от финансовых организаций Казахстана.</p>
+  <div class="section-tag" data-i18n="sources_fin_tag">Финансовые организации</div>
+  <h2 class="section-title" data-i18n="sources_fin_h2">Банки и финансовые сервисы</h2>
+  <p class="section-sub" data-i18n="sources_fin_sub">Рекомендации и данные от финансовых организаций Казахстана.</p>
 
   <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px,1fr)); gap:24px;">
     <div class="card fade-in" style="padding:32px 24px;">
       <h3 style="font-size:1.1rem; margin-bottom:10px;"><i class="fa-solid fa-building-columns" style="color:var(--accent-light);"></i> Kaspi Bank</h3>
-      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;">Рекомендации по безопасности для пользователей Kaspi.kz, информация о распространённых схемах мошенничества.</p>
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;" data-i18n="src_kaspi_p">Рекомендации по безопасности для пользователей Kaspi.kz, информация о распространённых схемах мошенничества.</p>
       <p style="font-size:0.82rem; color:var(--accent-light);">kaspi.kz</p>
     </div>
     <div class="card fade-in" style="padding:32px 24px;">
       <h3 style="font-size:1.1rem; margin-bottom:10px;"><i class="fa-solid fa-building-columns" style="color:var(--accent-light);"></i> Halyk Bank</h3>
-      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;">Материалы по финансовой грамотности и защите от мошенников.</p>
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;" data-i18n="src_halyk_p">Материалы по финансовой грамотности и защите от мошенников.</p>
       <p style="font-size:0.82rem; color:var(--accent-light);">halykbank.kz</p>
     </div>
     <div class="card fade-in" style="padding:32px 24px;">
-      <h3 style="font-size:1.1rem; margin-bottom:10px;"><i class="fa-solid fa-chart-bar" style="color:var(--accent-light);"></i> Первое кредитное бюро</h3>
-      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;">Данные о кредитном мошенничестве и инструменты проверки кредитной истории.</p>
+      <h3 style="font-size:1.1rem; margin-bottom:10px;"><i class="fa-solid fa-chart-bar" style="color:var(--accent-light);"></i> <span data-i18n="src_pkb">Первое кредитное бюро</span></h3>
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;" data-i18n="src_pkb_p">Данные о кредитном мошенничестве и инструменты проверки кредитной истории.</p>
       <p style="font-size:0.82rem; color:var(--accent-light);">1cb.kz</p>
     </div>
     <div class="card fade-in" style="padding:32px 24px;">
       <h3 style="font-size:1.1rem; margin-bottom:10px;"><i class="fa-solid fa-globe" style="color:var(--accent-light);"></i> eGov.kz</h3>
-      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;">Портал электронного правительства — информация о государственных услугах и защите персональных данных.</p>
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;" data-i18n="src_egov_p">Портал электронного правительства — информация о государственных услугах и защите персональных данных.</p>
       <p style="font-size:0.82rem; color:var(--accent-light);">egov.kz</p>
     </div>
   </div>
@@ -96,29 +101,29 @@
 
 <!-- RESEARCH SOURCES -->
 <section>
-  <div class="section-tag">Исследования</div>
-  <h2 class="section-title">Аналитика и исследования</h2>
-  <p class="section-sub">Международные и казахстанские исследования в области кибербезопасности.</p>
+  <div class="section-tag" data-i18n="sources_res_tag">Исследования</div>
+  <h2 class="section-title" data-i18n="sources_res_h2">Аналитика и исследования</h2>
+  <p class="section-sub" data-i18n="sources_res_sub">Международные и казахстанские исследования в области кибербезопасности.</p>
 
   <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px,1fr)); gap:24px;">
     <div class="card fade-in" style="padding:32px 24px;">
       <h3 style="font-size:1.1rem; margin-bottom:10px;"><i class="fa-solid fa-earth-americas" style="color:var(--accent-light);"></i> Interpol</h3>
-      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;">Международная статистика по киберпреступлениям и рекомендации по борьбе с онлайн-мошенничеством.</p>
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;" data-i18n="src_interpol_p">Международная статистика по киберпреступлениям и рекомендации по борьбе с онлайн-мошенничеством.</p>
       <p style="font-size:0.82rem; color:var(--accent-light);">interpol.int</p>
     </div>
     <div class="card fade-in" style="padding:32px 24px;">
       <h3 style="font-size:1.1rem; margin-bottom:10px;"><i class="fa-solid fa-lock" style="color:var(--accent-light);"></i> CERT-KZ</h3>
-      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;">Служба реагирования на компьютерные инциденты — данные о киберугрозах в Казахстане.</p>
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;" data-i18n="src_cert_p">Служба реагирования на компьютерные инциденты — данные о киберугрозах в Казахстане.</p>
       <p style="font-size:0.82rem; color:var(--accent-light);">cert.gov.kz</p>
     </div>
     <div class="card fade-in" style="padding:32px 24px;">
       <h3 style="font-size:1.1rem; margin-bottom:10px;"><i class="fa-solid fa-newspaper" style="color:var(--accent-light);"></i> Kazinform</h3>
-      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;">Международное информационное агентство — новости о мошенничестве и кибербезопасности в Казахстане.</p>
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;" data-i18n="src_kazinform_p">Международное информационное агентство — новости о мошенничестве и кибербезопасности в Казахстане.</p>
       <p style="font-size:0.82rem; color:var(--accent-light);">inform.kz</p>
     </div>
     <div class="card fade-in" style="padding:32px 24px;">
       <h3 style="font-size:1.1rem; margin-bottom:10px;"><i class="fa-solid fa-chart-line" style="color:var(--accent-light);"></i> Kaspersky</h3>
-      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;">Исследования в области кибербезопасности, статистика по фишингу и вредоносному ПО в Центральной Азии.</p>
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;" data-i18n="src_kaspersky_p">Исследования в области кибербезопасности, статистика по фишингу и вредоносному ПО в Центральной Азии.</p>
       <p style="font-size:0.82rem; color:var(--accent-light);">kaspersky.kz</p>
     </div>
   </div>
@@ -126,13 +131,13 @@
 
 <!-- DISCLAIMER -->
 <section style="background:var(--card-bg); text-align:center;">
-  <h2 class="section-title">Важное примечание</h2>
-  <p class="section-sub" style="max-width:640px; margin-left:auto; margin-right:auto;">
+  <h2 class="section-title" data-i18n="sources_disc_h2">Важное примечание</h2>
+  <p class="section-sub" style="max-width:640px; margin-left:auto; margin-right:auto;" data-i18n="sources_disc_p">
     PEASE — образовательный проект. Мы не являемся юридической или финансовой организацией. Информация на сайте носит ознакомительный характер. Для получения юридической помощи обращайтесь к квалифицированным специалистам.
   </p>
   <div class="btn-group" style="justify-content:center;">
-    <a href="index.html" class="btn btn-accent">На главную</a>
-    <a href="contacts.html" class="btn btn-outline">Экстренная помощь</a>
+    <a href="index.html" class="btn btn-accent" data-i18n="sources_disc_btn1">На главную</a>
+    <a href="contacts.html" class="btn btn-outline" data-i18n="sources_disc_btn2">Экстренная помощь</a>
   </div>
 </section>
 
@@ -141,41 +146,42 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <a href="index.html" class="nav-logo" style="font-size:1.6rem;">P<span class="accent-letter">E</span>ASE</a>
-      <p>Образовательный проект о защите от мошенничества. Защити себя и близких.</p>
+      <p data-i18n="footer_tagline">Образовательный проект о защите от мошенничества. Защити себя и близких.</p>
       <a href="https://www.instagram.com/pease_project" target="_blank" rel="noopener" style="color:var(--accent-light); font-size:0.85rem; text-decoration:none;"><i class="fa-brands fa-instagram"></i> @pease_project</a>
     </div>
     <div class="footer-col">
-      <h4>Разделы</h4>
+      <h4 data-i18n="footer_sections">Разделы</h4>
       <ul>
-        <li><a href="schemes.html">Схемы мошенников</a></li>
-        <li><a href="quiz.html">Тест на знания</a></li>
-        <li><a href="guides.html">Гайды</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="schemes.html" data-i18n="footer_link_schemes">Схемы мошенников</a></li>
+        <li><a href="quiz.html" data-i18n="footer_link_quiz">Тест на знания</a></li>
+        <li><a href="guides.html" data-i18n="footer_link_guides">Гайды</a></li>
+        <li><a href="contacts.html" data-i18n="footer_link_contacts">Контакты</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Помощь</h4>
+      <h4 data-i18n="footer_help">Помощь</h4>
       <ul>
-        <li><a href="contacts.html">Что делать если обманули</a></li>
-        <li><a href="contacts.html">Куда звонить</a></li>
-        <li><a href="contacts.html">Сообщить о схеме</a></li>
+        <li><a href="contacts.html" data-i18n="footer_help1">Что делать если обманули</a></li>
+        <li><a href="contacts.html" data-i18n="footer_help2">Куда звонить</a></li>
+        <li><a href="contacts.html" data-i18n="footer_help3">Сообщить о схеме</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>О проекте</h4>
+      <h4 data-i18n="footer_about">О проекте</h4>
       <ul>
-        <li><a href="team.html">Команда PEASE</a></li>
-        <li><a href="sources.html">Источники</a></li>
-        <li><a href="privacy.html">Конфиденциальность</a></li>
+        <li><a href="team.html" data-i18n="footer_about_team">Команда PEASE</a></li>
+        <li><a href="sources.html" data-i18n="footer_about_sources">Источники</a></li>
+        <li><a href="privacy.html" data-i18n="footer_about_privacy">Конфиденциальность</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; 2026 PEASE. Все права защищены.</span>
-    <span>Защити себя и близких</span>
+    <span data-i18n="footer_copyright">&copy; 2026 PEASE. Все права защищены.</span>
+    <span data-i18n="footer_slogan">Защити себя и близких</span>
   </div>
 </footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
