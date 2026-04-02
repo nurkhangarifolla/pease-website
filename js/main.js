@@ -182,9 +182,9 @@ document.addEventListener('DOMContentLoaded', () => {
       // visits: hit (increment) on every page load; rest: read only
       const [v, q, g, s] = await Promise.all([
         fetch(`${COUNTAPI}/${COUNTAPI_NS}/visits/up`).then(r => r.json()),
-        fetch(`${COUNTAPI}/${COUNTAPI_NS}/quiz-completions/get`).then(r => r.json()),
-        fetch(`${COUNTAPI}/${COUNTAPI_NS}/guides-opened/get`).then(r => r.json()),
-        fetch(`${COUNTAPI}/${COUNTAPI_NS}/schemes-viewed/get`).then(r => r.json())
+        fetch(`${COUNTAPI}/${COUNTAPI_NS}/quiz-completions/`).then(r => r.json()),
+        fetch(`${COUNTAPI}/${COUNTAPI_NS}/guides-opened/`).then(r => r.json()),
+        fetch(`${COUNTAPI}/${COUNTAPI_NS}/schemes-viewed/`).then(r => r.json())
       ]);
       [v, q, g, s].forEach((data, i) => {
         const el = document.getElementById(ids[i]);
