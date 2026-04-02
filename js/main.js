@@ -179,9 +179,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!document.getElementById(ids[0])) return;
 
     try {
-      // visits: hit (increment) on every page load; rest: read only
+      // visits: increment only once per device, then read on subsequent loads
+      const visited = localStorage.getItem('pease_visited');
+      const visitUrl = visited
+        ? `${COUNTAPI}/${COUNTAPI_NS}/visits/`
+        : `${COUNTAPI}/${COUNTAPI_NS}/visits/up`;
+      if (!visited) localStorage.setItem('pease_visited', '1');
+
       const [v, q, g, s] = await Promise.all([
-        fetch(`${COUNTAPI}/${COUNTAPI_NS}/visits/up`).then(r => r.json()),
+        fetch(visitUrl).then(r => r.json()),
         fetch(`${COUNTAPI}/${COUNTAPI_NS}/quiz-completions/`).then(r => r.json()),
         fetch(`${COUNTAPI}/${COUNTAPI_NS}/guides-opened/`).then(r => r.json()),
         fetch(`${COUNTAPI}/${COUNTAPI_NS}/schemes-viewed/`).then(r => r.json())
