@@ -328,6 +328,25 @@
       sources_disc_btn1: 'На главную',
       sources_disc_btn2: 'Экстренная помощь',
 
+      /* ═══ index.html — Platform Stats ═══ */
+      platform_tag: 'Платформа в цифрах',
+      platform_h2: 'PEASE в реальном времени',
+      platform_sub: 'Суммарная активность всех пользователей платформы.',
+      platform_visits: 'Посещений сайта',
+      platform_quiz: 'Тестов пройдено',
+      platform_guides: 'Гайдов изучено',
+      platform_schemes: 'Схем просмотрено',
+
+      /* ═══ index.html — User Progress ═══ */
+      index_progress_tag: 'Ваш прогресс',
+      index_progress_h2: 'Ваша активность на PEASE',
+      index_progress_sub: 'Данные сохранены в вашем браузере и никуда не передаются.',
+      progress_quiz_attempts: 'Тестов пройдено',
+      progress_best_score: 'Лучший результат',
+      progress_guides_read: 'Гайдов открыто',
+      progress_schemes_viewed: 'Схем изучено',
+      progress_reset: 'Сбросить прогресс',
+
       /* ═══ privacy.html ═══ */
       privacy_title: 'Конфиденциальность — PEASE',
       privacy_hero_badge: 'Политика',
@@ -662,6 +681,25 @@
       sources_disc_p: 'PEASE is an educational project. We are not a legal or financial organization. The information on this website is for educational purposes only. For legal assistance, please consult qualified specialists.',
       sources_disc_btn1: 'Home',
       sources_disc_btn2: 'Emergency Help',
+
+      /* ═══ index.html — Platform Stats ═══ */
+      platform_tag: 'Platform by the Numbers',
+      platform_h2: 'PEASE in Real Time',
+      platform_sub: 'Aggregated activity of all platform users.',
+      platform_visits: 'Site Visits',
+      platform_quiz: 'Quizzes Completed',
+      platform_guides: 'Guides Studied',
+      platform_schemes: 'Schemes Viewed',
+
+      /* ═══ index.html — User Progress ═══ */
+      index_progress_tag: 'Your Progress',
+      index_progress_h2: 'Your Activity on PEASE',
+      index_progress_sub: 'Data is saved in your browser and never shared.',
+      progress_quiz_attempts: 'Quizzes Completed',
+      progress_best_score: 'Best Score',
+      progress_guides_read: 'Guides Opened',
+      progress_schemes_viewed: 'Schemes Explored',
+      progress_reset: 'Reset Progress',
 
       /* ═══ privacy.html ═══ */
       privacy_title: 'Privacy Policy — PEASE',

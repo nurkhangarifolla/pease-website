@@ -146,6 +146,69 @@
   </div>
 </section>
 
+<!-- USER PROGRESS -->
+<section>
+  <div class="section-tag" data-i18n="index_progress_tag">Ваш прогресс</div>
+  <h2 class="section-title" data-i18n="index_progress_h2">Ваша активность на PEASE</h2>
+  <p class="section-sub" data-i18n="index_progress_sub">Данные сохранены в вашем браузере и никуда не передаются.</p>
+
+  <div class="progress-grid">
+    <div class="progress-stat-card fade-in">
+      <div class="ps-icon"><i class="fa-solid fa-brain"></i></div>
+      <div class="ps-val" id="statQuizAttempts">0</div>
+      <div class="ps-lbl" data-i18n="progress_quiz_attempts">Тестов пройдено</div>
+    </div>
+    <div class="progress-stat-card fade-in">
+      <div class="ps-icon gold"><i class="fa-solid fa-trophy"></i></div>
+      <div class="ps-val" id="statBestScore">—</div>
+      <div class="ps-lbl" data-i18n="progress_best_score">Лучший результат</div>
+    </div>
+    <div class="progress-stat-card fade-in">
+      <div class="ps-icon"><i class="fa-solid fa-book-open"></i></div>
+      <div class="ps-val" id="statGuidesRead">0</div>
+      <div class="ps-lbl" data-i18n="progress_guides_read">Гайдов открыто</div>
+    </div>
+    <div class="progress-stat-card fade-in">
+      <div class="ps-icon gold"><i class="fa-solid fa-magnifying-glass"></i></div>
+      <div class="ps-val" id="statSchemesViewed">0</div>
+      <div class="ps-lbl" data-i18n="progress_schemes_viewed">Схем изучено</div>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top:28px;">
+    <button class="btn-reset-progress" id="resetProgress" data-i18n="progress_reset">Сбросить прогресс</button>
+  </div>
+</section>
+
+<!-- PLATFORM STATS -->
+<section style="background:var(--card-bg);">
+  <div class="section-tag">
+    <span class="live-dot"></span>
+    <span data-i18n="platform_tag">Платформа в цифрах</span>
+  </div>
+  <h2 class="section-title" data-i18n="platform_h2">PEASE в реальном времени</h2>
+  <p class="section-sub" data-i18n="platform_sub">Суммарная активность всех пользователей платформы.</p>
+
+  <div class="num-grid">
+    <div class="card fade-in num-card">
+      <div class="num-val" style="color:var(--accent-light);" id="globalVisits">—</div>
+      <div class="num-lbl" data-i18n="platform_visits">Посещений сайта</div>
+    </div>
+    <div class="card fade-in num-card">
+      <div class="num-val" style="color:var(--gold);" id="globalQuizCompletions">—</div>
+      <div class="num-lbl" data-i18n="platform_quiz">Тестов пройдено</div>
+    </div>
+    <div class="card fade-in num-card">
+      <div class="num-val" style="color:var(--accent-light);" id="globalGuidesOpened">—</div>
+      <div class="num-lbl" data-i18n="platform_guides">Гайдов изучено</div>
+    </div>
+    <div class="card fade-in num-card">
+      <div class="num-val" style="color:var(--gold);" id="globalSchemesViewed">—</div>
+      <div class="num-lbl" data-i18n="platform_schemes">Схем просмотрено</div>
+    </div>
+  </div>
+</section>
+
 <!-- STATS SECTION -->
 <section>
   <div class="section-tag" data-i18n="index_stats_tag">Статистика</div>

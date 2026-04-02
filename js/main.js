@@ -61,10 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ── Scheme Detail Accordions ── */
-  document.querySelectorAll('.scheme-detail-btn').forEach(btn => {
+  document.querySelectorAll('.scheme-detail-btn').forEach((btn, idx) => {
     btn.addEventListener('click', () => {
       const content = btn.nextElementSibling;
       const isOpen = btn.classList.contains('active');
+
+      if (!isOpen) trackSchemeViewed(Math.floor(idx / 3));
 
       btn.classList.toggle('active');
       content.style.maxHeight = isOpen ? null : content.scrollHeight + 'px';
@@ -72,11 +74,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ── Guide Card Toggle ── */
-  document.querySelectorAll('.guide-card-header').forEach(header => {
+  document.querySelectorAll('.guide-card-header').forEach((header, idx) => {
     header.addEventListener('click', () => {
       const card = header.closest('.guide-card');
       const content = card.querySelector('.guide-card-content');
       const isOpen = card.classList.contains('open');
+
+      if (!isOpen) trackGuideRead(idx);
 
       card.classList.toggle('open');
       content.style.maxHeight = isOpen ? null : content.scrollHeight + 'px';
@@ -151,6 +155,102 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.textContent = originalText;
         btn.disabled = false;
       });
+    });
+  }
+
+  /* ── Progress Tracking ── */
+  const COUNTAPI = 'https://api.counterapi.dev/v1';
+  const COUNTAPI_NS = 'pease-kz-edu';
+
+  function animateNum(el, target) {
+    const duration = 1400;
+    const start = performance.now();
+    (function step(now) {
+      const t = Math.min((now - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - t, 3);
+      el.textContent = Math.round(ease * target).toLocaleString();
+      if (t < 1) requestAnimationFrame(step);
+    })(start);
+  }
+
+  async function fetchPlatformStats() {
+    const ids = ['globalVisits', 'globalQuizCompletions', 'globalGuidesOpened', 'globalSchemesViewed'];
+    const keys = ['visits', 'quiz-completions', 'guides-opened', 'schemes-viewed'];
+    if (!document.getElementById(ids[0])) return;
+
+    try {
+      // visits: hit (increment) on every page load; rest: read only
+      const [v, q, g, s] = await Promise.all([
+        fetch(`${COUNTAPI}/${COUNTAPI_NS}/visits/up`).then(r => r.json()),
+        fetch(`${COUNTAPI}/${COUNTAPI_NS}/quiz-completions/get`).then(r => r.json()),
+        fetch(`${COUNTAPI}/${COUNTAPI_NS}/guides-opened/get`).then(r => r.json()),
+        fetch(`${COUNTAPI}/${COUNTAPI_NS}/schemes-viewed/get`).then(r => r.json())
+      ]);
+      [v, q, g, s].forEach((data, i) => {
+        const el = document.getElementById(ids[i]);
+        const val = data.count ?? data.value;
+        if (el && val != null) animateNum(el, val);
+      });
+    } catch (_) { /* silent fail — dashes remain */ }
+  }
+
+  fetchPlatformStats();
+
+  function trackSchemeViewed(schemeIdx) {
+    const set = JSON.parse(localStorage.getItem('pease_schemes_set') || '[]');
+    if (!set.includes(schemeIdx)) {
+      set.push(schemeIdx);
+      localStorage.setItem('pease_schemes_set', JSON.stringify(set));
+      fetch(`${COUNTAPI}/${COUNTAPI_NS}/schemes-viewed/up`).catch(() => {});
+    }
+  }
+
+  function trackGuideRead(idx) {
+    const set = JSON.parse(localStorage.getItem('pease_guides_set') || '[]');
+    if (!set.includes(idx)) {
+      set.push(idx);
+      localStorage.setItem('pease_guides_set', JSON.stringify(set));
+      fetch(`${COUNTAPI}/${COUNTAPI_NS}/guides-opened/up`).catch(() => {});
+    }
+  }
+
+  function trackQuizComplete(score) {
+    const attempts = parseInt(localStorage.getItem('pease_quiz_attempts') || '0', 10) + 1;
+    localStorage.setItem('pease_quiz_attempts', attempts);
+    const best = localStorage.getItem('pease_quiz_best');
+    if (best === null || score > parseInt(best, 10)) {
+      localStorage.setItem('pease_quiz_best', score);
+    }
+    fetch(`${COUNTAPI}/${COUNTAPI_NS}/quiz-completions/up`).catch(() => {});
+    if (typeof window.updateProgressSection === 'function') window.updateProgressSection();
+  }
+
+  window.updateProgressSection = function () {
+    let el;
+    el = document.getElementById('statQuizAttempts');
+    if (el) el.textContent = localStorage.getItem('pease_quiz_attempts') || '0';
+
+    el = document.getElementById('statBestScore');
+    if (el) {
+      const best = localStorage.getItem('pease_quiz_best');
+      el.textContent = best !== null ? best + '/10' : '—';
+    }
+
+    el = document.getElementById('statGuidesRead');
+    if (el) el.textContent = JSON.parse(localStorage.getItem('pease_guides_set') || '[]').length;
+
+    el = document.getElementById('statSchemesViewed');
+    if (el) el.textContent = JSON.parse(localStorage.getItem('pease_schemes_set') || '[]').length;
+  };
+
+  window.updateProgressSection();
+
+  const resetBtn = document.getElementById('resetProgress');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      ['pease_quiz_attempts', 'pease_quiz_best', 'pease_guides_set', 'pease_schemes_set']
+        .forEach(k => localStorage.removeItem(k));
+      window.updateProgressSection();
     });
   }
 
@@ -423,6 +523,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function renderResult() {
+    trackQuizComplete(score);
     const data = getActiveData();
     const ui = getUI();
     let badge, title, desc;
